@@ -7,9 +7,8 @@ SMODS.Back {
     loc_txt = {
         name = 'Sailor Deck',
         text = {
-            [1] = 'Begin with {C:attention}2{} {C:spectral}Black Holes{}',
-            [2] = 'Begin with a random',
-            [3] = '{C:gold}Sailor Moon{} Joker'
+            [1] = 'Begin with a random',
+            [2] = '{C:gold}Sailor Moon{} Joker'
         },
     },
     unlocked = true,
@@ -17,17 +16,6 @@ SMODS.Back {
     no_collection = false,
     atlas = 'CustomDecks',
     apply = function(self, back)
-        for i = 1, 2 do
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    
-                    play_sound('timpani')
-                    SMODS.add_card({ set = 'Spectral', key = 'c_black_hole'
-                    })
-                    return true
-                end
-            }))
-        end
         G.E_MANAGER:add_event(Event({
             func = function()
                 play_sound('timpani')

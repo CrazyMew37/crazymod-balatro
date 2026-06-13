@@ -3,8 +3,7 @@ SMODS.Joker{ --Luna and Artemis
     key = "lunaandartemis",
     config = {
         extra = {
-            SailorChips = -160,
-            SailorMult = -16,
+            SailorSlots = 1,
             levels0 = 1
         }
     },
@@ -13,14 +12,14 @@ SMODS.Joker{ --Luna and Artemis
         ['text'] = {
             [1] = 'Level up {C:attention}Flush Five{}',
             [2] = 'every round',
-            [3] = '{C:blue}#1#{} Chips, {C:red}#2#{} Mult'
+            [3] = '{C:red}-#1#{} Shop Slot'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 2,
+        x = 5,
         y = 6
     },
     display_size = {
@@ -39,7 +38,7 @@ SMODS.Joker{ --Luna and Artemis
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.SailorChips, card.ability.extra.SailorMult}}
+        return {vars = {card.ability.extra.SailorSlots}}
     end,
     
     calculate = function(self, card, context)
@@ -50,13 +49,13 @@ SMODS.Joker{ --Luna and Artemis
                 message = localize('k_level_up_ex')
             }
         end
-        if context.cardarea == G.jokers and context.joker_main  then
-            return {
-                chips = card.ability.extra.SailorChips,
-                extra = {
-                    mult = card.ability.extra.SailorMult
-                }
-            }
-        end
+    end,
+    
+    add_to_deck = function(self, card, from_debuff)
+        change_shop_size(-card.ability.extra.SailorSlots)
+    end,
+    
+    remove_from_deck = function(self, card, from_debuff)
+        change_shop_size(card.ability.extra.SailorSlots)
     end
 }

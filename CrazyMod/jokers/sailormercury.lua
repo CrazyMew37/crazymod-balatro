@@ -3,8 +3,10 @@ SMODS.Joker{ --Sailor Mercury
     key = "sailormercury",
     config = {
         extra = {
-            SailorChips = -30,
-            SailorMult = -6,
+            shop_slots_increase = '1',
+            booster_slots_increase = '2',
+            SailorSlots = 1,
+            SailorBooster = 2,
             levels0 = 1
         }
     },
@@ -13,14 +15,15 @@ SMODS.Joker{ --Sailor Mercury
         ['text'] = {
             [1] = 'Level up {C:attention}Pair{}',
             [2] = 'every round',
-            [3] = '{C:blue}#1#{} Chips, {C:red}#2#{} Mult'
+            [3] = '{C:red}-#1#{} Shop Slot',
+            [4] = '{C:red}-#2#{} Booster Slots'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 2,
+        x = 5,
         y = 5
     },
     display_size = {
@@ -39,7 +42,7 @@ SMODS.Joker{ --Sailor Mercury
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.SailorChips, card.ability.extra.SailorMult}}
+        return {vars = {card.ability.extra.SailorSlots, card.ability.extra.SailorBooster}}
     end,
     
     calculate = function(self, card, context)
@@ -50,13 +53,15 @@ SMODS.Joker{ --Sailor Mercury
                 message = localize('k_level_up_ex')
             }
         end
-        if context.cardarea == G.jokers and context.joker_main  then
-            return {
-                chips = card.ability.extra.SailorChips,
-                extra = {
-                    mult = card.ability.extra.SailorMult
-                }
-            }
-        end
+    end,
+    
+    add_to_deck = function(self, card, from_debuff)
+        change_shop_size(-1)
+        SMODS.change_booster_limit(-2)
+    end,
+    
+    remove_from_deck = function(self, card, from_debuff)
+        change_shop_size(1)
+        SMODS.change_booster_limit(2)
     end
 }

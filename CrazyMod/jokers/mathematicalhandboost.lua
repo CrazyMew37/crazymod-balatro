@@ -45,7 +45,7 @@ SMODS.Joker{ --Mathematical Hand Boost
         }
     },
     pos = {
-        x = 7,
+        x = 9,
         y = 4
     },
     display_size = {

@@ -16,7 +16,7 @@ SMODS.Joker{ --Natsuki
         }
     },
     pos = {
-        x = 3,
+        x = 8,
         y = 8
     },
     display_size = {
@@ -33,7 +33,7 @@ SMODS.Joker{ --Natsuki
     atlas = 'CustomJokers',
     pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_crazymod_ddlc"] = true },
     soul_pos = {
-        x = 4,
+        x = 9,
         y = 8
     },
     in_pool = function(self, args)

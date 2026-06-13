@@ -18,8 +18,8 @@ SMODS.Joker{ --Kagamine Rin
         }
     },
     pos = {
-        x = 9,
-        y = 6
+        x = 4,
+        y = 7
     },
     display_size = {
         w = 71 * 1, 

@@ -10,7 +10,7 @@ SMODS.Joker{ --Diana Addison
     loc_txt = {
         ['name'] = 'Diana Addison',
         ['text'] = {
-            [1] = 'Played {C:diamonds}Ace of Diamonds{} score {X:enhanced,C:edition}^^1.11{} Mult',
+            [1] = 'Played {C:diamonds}Ace of Diamonds{} score {X:mult,C:edition}^^1.11{} Mult',
             [2] = '{C:inactive,s:0.75}\"One of the meaner Ace Mages. She may come off as{}',
             [3] = '{C:inactive,s:0.75}rough, but she simply takes her job very seriously.\"{}'
         },
@@ -19,8 +19,8 @@ SMODS.Joker{ --Diana Addison
         }
     },
     pos = {
-        x = 7,
-        y = 9
+        x = 8,
+        y = 10
     },
     display_size = {
         w = 71 * 1, 

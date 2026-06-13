@@ -10,7 +10,7 @@ SMODS.Joker{ --Sayori
     loc_txt = {
         ['name'] = 'Sayori',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^#1#{} Chips and {X:enhanced,C:white}^#2#{} Mult when',
+            [1] = '{X:chips,C:money}^#1#{} Chips and {X:mult,C:money}^#2#{} Mult when',
             [2] = 'scoring a {C:attention}Poem Card{}',
             [3] = '{C:red}Destroys{} the {C:attention}Poem Card{} after scoring',
             [4] = 'Create a {C:attention}Poem Card{} and draw to hand',
@@ -21,8 +21,8 @@ SMODS.Joker{ --Sayori
         }
     },
     pos = {
-        x = 9,
-        y = 7
+        x = 4,
+        y = 8
     },
     display_size = {
         w = 71 * 1, 
@@ -38,7 +38,7 @@ SMODS.Joker{ --Sayori
     atlas = 'CustomJokers',
     pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_crazymod_ddlc"] = true },
     soul_pos = {
-        x = 0,
+        x = 5,
         y = 8
     },
     in_pool = function(self, args)

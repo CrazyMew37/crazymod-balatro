@@ -20,8 +20,8 @@ loc_txt = {
     }
 },
 pos = {
-    x = 9,
-    y = 9
+    x = 0,
+    y = 11
 },
 display_size = {
     w = 71 * 1, 
@@ -37,8 +37,8 @@ discovered = true,
 atlas = 'CustomJokers',
 pools = { ["crazymod_crazymod_jokers"] = true },
 soul_pos = {
-    x = 0,
-    y = 10
+    x = 1,
+    y = 11
 },
 in_pool = function(self, args)
     return (

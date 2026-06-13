@@ -22,7 +22,7 @@ SMODS.Joker{ --Toilet
         }
     },
     pos = {
-        x = 4,
+        x = 6,
         y = 4
     },
     display_size = {

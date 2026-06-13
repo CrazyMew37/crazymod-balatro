@@ -75,127 +75,201 @@ SMODS.Atlas({
 local NFS = require("nativefs")
 to_big = to_big or function(a) return a end
 lenient_bignum = lenient_bignum or function(a) return a end
-
-local jokerIndexList = {52,35,36,53,54,55,89,58,65,34,28,22,6,4,33,26,25,20,5,62,59,57,61,3,18,60,85,9,13,56,21,41,44,80,83,87,51,23,82,16,42,66,24,86,12,30,45,27,1,19,73,72,71,70,78,69,75,77,74,76,88,43,63,11,67,31,37,38,47,48,39,29,10,2,40,49,79,90,50,46,68,8,64,15,7,81,32,17,14,84}
-
-local function load_jokers_folder()
-    local mod_path = SMODS.current_mod.path
-    local jokers_path = mod_path .. "/jokers"
-    local files = NFS.getDirectoryItemsInfo(jokers_path)
-    for i = 1, #jokerIndexList do
-        local file_name = files[jokerIndexList[i]].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("jokers/" .. file_name))()
-        end
-    end
-end
-
-
-local consumableIndexList = {32,34,33,6,12,30,13,26,25,21,36,14,11,8,7,1,3,24,15,27,16,20,9,31,19,17,28,5,18,29,22,23,2,10,35,4}
-
-local function load_consumables_folder()
-    local mod_path = SMODS.current_mod.path
-    local consumables_path = mod_path .. "/consumables"
-    local files = NFS.getDirectoryItemsInfo(consumables_path)
-    local set_file_number = #files + 1
+-- this function is used to load everything within a folder.-- Jokerforge doesnt use it because it doesnt make loading order easy
+local function load_folder(path)
+    local files = NFS.getDirectoryItemsInfo(mod_path .. "/" .. path)
     for i = 1, #files do
-        if files[i].name == "sets.lua" then
-            assert(SMODS.load_file("consumables/sets.lua"))()
-            set_file_number = i
-        end
-    end    
-    for i = 1, #consumableIndexList do
-        local j = consumableIndexList[i]
-        if j >= set_file_number then 
-            j = j + 1
-        end
-        local file_name = files[j].name
+        local file_name = files[i].name
         if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("consumables/" .. file_name))()
+            assert(SMODS.load_file(path .. file_name))()
         end
     end
 end
+-- load the jokers
+if true then
+    assert(SMODS.load_file("jokers/otherjoker.lua"))()
+    assert(SMODS.load_file("jokers/jokerbutbetter.lua"))()
+    assert(SMODS.load_file("jokers/jokerbutevenmorebetter.lua"))()
+    assert(SMODS.load_file("jokers/otherjokerbutbetter.lua"))()
+    assert(SMODS.load_file("jokers/otherjokerbutevenmorebetter.lua"))()
+    assert(SMODS.load_file("jokers/otherotherjoker.lua"))()
+    assert(SMODS.load_file("jokers/vacantjoker.lua"))()
+    assert(SMODS.load_file("jokers/pixeljoker.lua"))()
+    assert(SMODS.load_file("jokers/rekoj.lua"))()
+    assert(SMODS.load_file("jokers/j.lua"))()
+    assert(SMODS.load_file("jokers/grossmichel.lua"))()
+    assert(SMODS.load_file("jokers/flhorban920.lua"))()
+    assert(SMODS.load_file("jokers/bananaslamma.lua"))()
+    assert(SMODS.load_file("jokers/applecore.lua"))()
+    assert(SMODS.load_file("jokers/honeycrisp.lua"))()
+    assert(SMODS.load_file("jokers/grannysmith.lua"))()
+    assert(SMODS.load_file("jokers/goldendelicious.lua"))()
+    assert(SMODS.load_file("jokers/enchantedgoldenapple.lua"))()
+    assert(SMODS.load_file("jokers/badapple.lua"))()
+    assert(SMODS.load_file("jokers/plastictangerine.lua"))()
+    assert(SMODS.load_file("jokers/pizzabox.lua"))()
+    assert(SMODS.load_file("jokers/pineapplepizza.lua"))()
+    assert(SMODS.load_file("jokers/pizzaface.lua"))()
+    assert(SMODS.load_file("jokers/amore.lua"))()
+    assert(SMODS.load_file("jokers/dominos.lua"))()
+    assert(SMODS.load_file("jokers/pizzacrust.lua"))()
+    assert(SMODS.load_file("jokers/thirtyminutesoritsfree.lua"))()
+    assert(SMODS.load_file("jokers/bonniesfacepizza.lua"))()
+    assert(SMODS.load_file("jokers/chuckecheese.lua"))()
+    assert(SMODS.load_file("jokers/outpizzathehut.lua"))()
+    assert(SMODS.load_file("jokers/ethan.lua"))()
+    assert(SMODS.load_file("jokers/kris.lua"))()
+    assert(SMODS.load_file("jokers/lyra.lua"))()
+    assert(SMODS.load_file("jokers/silver.lua"))()
+    assert(SMODS.load_file("jokers/thebigcheese.lua"))()
+    assert(SMODS.load_file("jokers/lastbreath.lua"))()
+    assert(SMODS.load_file("jokers/opoc.lua"))()
+    assert(SMODS.load_file("jokers/freddyfazbear.lua"))()
+    assert(SMODS.load_file("jokers/funtimefoxy.lua"))()
+    assert(SMODS.load_file("jokers/squidwardtentacles.lua"))()
+    assert(SMODS.load_file("jokers/cutawaygag.lua"))()
+    assert(SMODS.load_file("jokers/revengeofringo.lua"))()
+    assert(SMODS.load_file("jokers/maliceofmaguro.lua"))()
+    assert(SMODS.load_file("jokers/resentmentofrisukuma.lua"))()
+    assert(SMODS.load_file("jokers/gachacapsule.lua"))()
+    assert(SMODS.load_file("jokers/toilet.lua"))()
+    assert(SMODS.load_file("jokers/chaostheory.lua"))()
+    assert(SMODS.load_file("jokers/happymeal.lua"))()
+    assert(SMODS.load_file("jokers/mathematicalhandboost.lua"))()
+    assert(SMODS.load_file("jokers/grilledcheese.lua"))()
+    assert(SMODS.load_file("jokers/_2048.lua"))()
+    assert(SMODS.load_file("jokers/emerald.lua"))()
+    assert(SMODS.load_file("jokers/rushhour.lua"))()
+    assert(SMODS.load_file("jokers/sailormoon.lua"))()
+    assert(SMODS.load_file("jokers/sailormercury.lua"))()
+    assert(SMODS.load_file("jokers/sailormars.lua"))()
+    assert(SMODS.load_file("jokers/sailorjupiter.lua"))()
+    assert(SMODS.load_file("jokers/sailorvenus.lua"))()
+    assert(SMODS.load_file("jokers/sailorchibimoon.lua"))()
+    assert(SMODS.load_file("jokers/sailorpluto.lua"))()
+    assert(SMODS.load_file("jokers/sailoruranus.lua"))()
+    assert(SMODS.load_file("jokers/sailorneptune.lua"))()
+    assert(SMODS.load_file("jokers/sailorsaturn.lua"))()
+    assert(SMODS.load_file("jokers/tuxedomask.lua"))()
+    assert(SMODS.load_file("jokers/lunaandartemis.lua"))()
+    assert(SMODS.load_file("jokers/pokemonrgby.lua"))()
+    assert(SMODS.load_file("jokers/canvas.lua"))()
+    assert(SMODS.load_file("jokers/rivertrio.lua"))()
+    assert(SMODS.load_file("jokers/tertiarycolors.lua"))()
+    assert(SMODS.load_file("jokers/tux.lua"))()
+    assert(SMODS.load_file("jokers/hatsunemiku.lua"))()
+    assert(SMODS.load_file("jokers/kagaminelen.lua"))()
+    assert(SMODS.load_file("jokers/kagaminerin.lua"))()
+    assert(SMODS.load_file("jokers/megurineluka.lua"))()
+    assert(SMODS.load_file("jokers/meiko.lua"))()
+    assert(SMODS.load_file("jokers/kaito.lua"))()
+    assert(SMODS.load_file("jokers/gumi.lua"))()
+    assert(SMODS.load_file("jokers/camuigackpo.lua"))()
+    assert(SMODS.load_file("jokers/akitaneru.lua"))()
+    assert(SMODS.load_file("jokers/kasaneteto.lua"))()
+    assert(SMODS.load_file("jokers/monika.lua"))()
+    assert(SMODS.load_file("jokers/sayori.lua"))()
+    assert(SMODS.load_file("jokers/yuri.lua"))()
+    assert(SMODS.load_file("jokers/natsuki.lua"))()
+    assert(SMODS.load_file("jokers/mc.lua"))()
+    assert(SMODS.load_file("jokers/royalalchemy.lua"))()
+    assert(SMODS.load_file("jokers/blackcat.lua"))()
+    assert(SMODS.load_file("jokers/whitecat.lua"))()
+    assert(SMODS.load_file("jokers/graycat.lua"))()
+    assert(SMODS.load_file("jokers/pyramidscheme.lua"))()
+    assert(SMODS.load_file("jokers/crazydave.lua"))()
+    assert(SMODS.load_file("jokers/repeater.lua"))()
+    assert(SMODS.load_file("jokers/bemeebeth.lua"))()
+    assert(SMODS.load_file("jokers/asteroid.lua"))()
+    assert(SMODS.load_file("jokers/miyakoakiyama.lua"))()
+    assert(SMODS.load_file("jokers/spesashworth.lua"))()
+    assert(SMODS.load_file("jokers/hezlyahonen.lua"))()
+    assert(SMODS.load_file("jokers/dianaaddison.lua"))()
+    assert(SMODS.load_file("jokers/cloveracker.lua"))()
+    assert(SMODS.load_file("jokers/thewinbuttonthejokertoendalljokers.lua"))()
+end
+-- load the consumables
+if true then
+    assert(SMODS.load_file("consumables/thedough.lua"))()
+    assert(SMODS.load_file("consumables/thepen.lua"))()
+    assert(SMODS.load_file("consumables/theleek.lua"))()
+    assert(SMODS.load_file("consumables/crystaltokyo.lua"))()
+    assert(SMODS.load_file("consumables/homework.lua"))()
+    assert(SMODS.load_file("consumables/synth.lua"))()
+    assert(SMODS.load_file("consumables/insanity.lua"))()
+    assert(SMODS.load_file("consumables/renpyconverter.lua"))()
+    assert(SMODS.load_file("consumables/red.lua"))()
+    assert(SMODS.load_file("consumables/orange.lua"))()
+    assert(SMODS.load_file("consumables/yellow.lua"))()
+    assert(SMODS.load_file("consumables/lime.lua"))()
+    assert(SMODS.load_file("consumables/green.lua"))()
+    assert(SMODS.load_file("consumables/emerald.lua"))()
+    assert(SMODS.load_file("consumables/cyan.lua"))()
+    assert(SMODS.load_file("consumables/azure.lua"))()
+    assert(SMODS.load_file("consumables/blue.lua"))()
+    assert(SMODS.load_file("consumables/purple.lua"))()
+    assert(SMODS.load_file("consumables/magenta.lua"))()
+    assert(SMODS.load_file("consumables/rose.lua"))()
+    assert(SMODS.load_file("consumables/maroon.lua"))()
+    assert(SMODS.load_file("consumables/olive.lua"))()
+    assert(SMODS.load_file("consumables/forest.lua"))()
+    assert(SMODS.load_file("consumables/teal.lua"))()
+    assert(SMODS.load_file("consumables/navy.lua"))()
+    assert(SMODS.load_file("consumables/mauve.lua"))()
+    assert(SMODS.load_file("consumables/salmon.lua"))()
+    assert(SMODS.load_file("consumables/cream.lua"))()
+    assert(SMODS.load_file("consumables/mint.lua"))()
+    assert(SMODS.load_file("consumables/sky.lua"))()
+    assert(SMODS.load_file("consumables/periwinkle.lua"))()
+    assert(SMODS.load_file("consumables/pink.lua"))()
+    assert(SMODS.load_file("consumables/black.lua"))()
+    assert(SMODS.load_file("consumables/gray.lua"))()
+    assert(SMODS.load_file("consumables/white.lua"))()
+    assert(SMODS.load_file("consumables/brown.lua"))()
+end
+--load the sets
+assert(SMODS.load_file("consumables/sets.lua"))()
+-- load the enhancements
+if true then
+    assert(SMODS.load_file("enhancements/pizzacard.lua"))()
+    assert(SMODS.load_file("enhancements/poemcard.lua"))()
+end
 
+-- load the seals
+if true then
+    assert(SMODS.load_file("seals/appleseal.lua"))()
+    assert(SMODS.load_file("seals/musicalseal.lua"))()
+end
 
-local enhancementIndexList = {1,2}
+-- load the vouchers
+if true then
+    assert(SMODS.load_file("vouchers/ms_paint.lua"))()
+    assert(SMODS.load_file("vouchers/krita.lua"))()
+end
 
-local function load_enhancements_folder()
-    local mod_path = SMODS.current_mod.path
-    local enhancements_path = mod_path .. "/enhancements"
-    local files = NFS.getDirectoryItemsInfo(enhancements_path)
-    for i = 1, #enhancementIndexList do
-        local file_name = files[enhancementIndexList[i]].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("enhancements/" .. file_name))()
-        end
-    end
+-- load the decks
+if true then
+    assert(SMODS.load_file("decks/cliche_deck.lua"))()
+    assert(SMODS.load_file("decks/literature_deck.lua"))()
+    assert(SMODS.load_file("decks/greasy_deck.lua"))()
+    assert(SMODS.load_file("decks/ace_mage_deck.lua"))()
+    assert(SMODS.load_file("decks/sailor_deck.lua"))()
+    assert(SMODS.load_file("decks/splattered_deck.lua"))()
+    assert(SMODS.load_file("decks/sound_deck.lua"))()
+    assert(SMODS.load_file("decks/kitty_deck.lua"))()
+    assert(SMODS.load_file("decks/apple_deck.lua"))()
+    assert(SMODS.load_file("decks/joke_deck.lua"))()
 end
 
 
-local sealIndexList = {1,2}
 
-local function load_seals_folder()
-    local mod_path = SMODS.current_mod.path
-    local seals_path = mod_path .. "/seals"
-    local files = NFS.getDirectoryItemsInfo(seals_path)
-    for i = 1, #sealIndexList do
-        local file_name = files[sealIndexList[i]].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("seals/" .. file_name))()
-        end
-    end
-end
+assert(SMODS.load_file("rarities.lua"))()
 
 
-local voucherIndexList = {2,1}
-
-local function load_vouchers_folder()
-    local mod_path = SMODS.current_mod.path
-    local vouchers_path = mod_path .. "/vouchers"
-    local files = NFS.getDirectoryItemsInfo(vouchers_path)
-    for i = 1, #voucherIndexList do
-        local file_name = files[voucherIndexList[i]].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("vouchers/" .. file_name))()
-        end
-    end
-end
-
-
-local deckIndexList = {2,5,3,1,6,4}
-
-local function load_decks_folder()
-    local mod_path = SMODS.current_mod.path
-    local decks_path = mod_path .. "/decks"
-    local files = NFS.getDirectoryItemsInfo(decks_path)
-    for i = 1, #deckIndexList do
-        local file_name = files[deckIndexList[i]].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("decks/" .. file_name))()
-        end
-    end
-end
-
-local function load_rarities_file()
-    local mod_path = SMODS.current_mod.path
-    assert(SMODS.load_file("rarities.lua"))()
-end
-
-load_rarities_file()
-
-local function load_boosters_file()
-    local mod_path = SMODS.current_mod.path
-    assert(SMODS.load_file("boosters.lua"))()
-end
-
-load_boosters_file()
+-- load boosters
+assert(SMODS.load_file("boosters.lua"))()
+--load sounds
 assert(SMODS.load_file("sounds.lua"))()
-load_jokers_folder()
-load_consumables_folder()
-load_enhancements_folder()
-load_seals_folder()
-load_vouchers_folder()
-load_decks_folder()
 SMODS.ObjectType({
     key = "crazymod_food",
     cards = {
@@ -208,258 +282,268 @@ SMODS.ObjectType({
         ["j_popcorn"] = true,
         ["j_ramen"] = true,
         ["j_selzer"] = true,
-        ["j_crazymod__2048"] = true,
-        ["j_crazymod_grilledcheese"] = true
+        ["j_crazymod_grilledcheese"] = true,
+        ["j_crazymod__2048"] = true
     },
 })
 
 SMODS.ObjectType({
     key = "crazymod_crazymod_jokers",
     cards = {
-        ["j_crazymod__2048"] = true,
-        ["j_crazymod_akitaneru"] = true,
-        ["j_crazymod_amore"] = true,
-        ["j_crazymod_applecore"] = true,
-        ["j_crazymod_badapple"] = true,
-        ["j_crazymod_bananaslamma"] = true,
-        ["j_crazymod_bemeebeth"] = true,
-        ["j_crazymod_blackcat"] = true,
-        ["j_crazymod_bonniesfacepizza"] = true,
-        ["j_crazymod_camuigackpo"] = true,
-        ["j_crazymod_canvas"] = true,
-        ["j_crazymod_chaostheory"] = true,
-        ["j_crazymod_chuckecheese"] = true,
-        ["j_crazymod_cloveracker"] = true,
-        ["j_crazymod_crazydave"] = true,
-        ["j_crazymod_cutawaygag"] = true,
-        ["j_crazymod_dianaaddison"] = true,
-        ["j_crazymod_dominos"] = true,
-        ["j_crazymod_emerald"] = true,
-        ["j_crazymod_enchantedgoldenapple"] = true,
-        ["j_crazymod_ethan"] = true,
-        ["j_crazymod_flhorban920"] = true,
-        ["j_crazymod_freddyfazbear"] = true,
-        ["j_crazymod_gachacapsule"] = true,
-        ["j_crazymod_goldendelicious"] = true,
-        ["j_crazymod_grannysmith"] = true,
-        ["j_crazymod_grilledcheese"] = true,
-        ["j_crazymod_grossmichel"] = true,
-        ["j_crazymod_gumi"] = true,
-        ["j_crazymod_happymeal"] = true,
-        ["j_crazymod_hatsunemiku"] = true,
-        ["j_crazymod_hezlyahonen"] = true,
-        ["j_crazymod_honeycrisp"] = true,
-        ["j_crazymod_j"] = true,
+        ["j_crazymod_otherjoker"] = true,
         ["j_crazymod_jokerbutbetter"] = true,
         ["j_crazymod_jokerbutevenmorebetter"] = true,
-        ["j_crazymod_kagaminelen"] = true,
-        ["j_crazymod_kagaminerin"] = true,
-        ["j_crazymod_kaito"] = true,
-        ["j_crazymod_kasaneteto"] = true,
-        ["j_crazymod_kris"] = true,
-        ["j_crazymod_lastbreath"] = true,
-        ["j_crazymod_lunaandartemis"] = true,
-        ["j_crazymod_lyra"] = true,
-        ["j_crazymod_mathematicalhandboost"] = true,
-        ["j_crazymod_mc"] = true,
-        ["j_crazymod_megurineluka"] = true,
-        ["j_crazymod_meiko"] = true,
-        ["j_crazymod_monika"] = true,
-        ["j_crazymod_natsuki"] = true,
-        ["j_crazymod_opoc"] = true,
-        ["j_crazymod_otherjoker"] = true,
         ["j_crazymod_otherjokerbutbetter"] = true,
         ["j_crazymod_otherjokerbutevenmorebetter"] = true,
         ["j_crazymod_otherotherjoker"] = true,
-        ["j_crazymod_outpizzathehut"] = true,
-        ["j_crazymod_pineapplepizza"] = true,
-        ["j_crazymod_pixeljoker"] = true,
-        ["j_crazymod_pizzabox"] = true,
-        ["j_crazymod_pizzacrust"] = true,
-        ["j_crazymod_pizzaface"] = true,
-        ["j_crazymod_plastictangerine"] = true,
-        ["j_crazymod_pokemonrgby"] = true,
-        ["j_crazymod_pyramidscheme"] = true,
-        ["j_crazymod_rekoj"] = true,
-        ["j_crazymod_ringosrevenge"] = true,
-        ["j_crazymod_rivertrio"] = true,
-        ["j_crazymod_royalalchemy"] = true,
-        ["j_crazymod_sailorchibimoon"] = true,
-        ["j_crazymod_sailorjupiter"] = true,
-        ["j_crazymod_sailormars"] = true,
-        ["j_crazymod_sailormercury"] = true,
-        ["j_crazymod_sailormoon"] = true,
-        ["j_crazymod_sailorneptune"] = true,
-        ["j_crazymod_sailorpluto"] = true,
-        ["j_crazymod_sailorsaturn"] = true,
-        ["j_crazymod_sailoruranus"] = true,
-        ["j_crazymod_sailorvenus"] = true,
-        ["j_crazymod_sayori"] = true,
-        ["j_crazymod_silver"] = true,
-        ["j_crazymod_spesashworth"] = true,
-        ["j_crazymod_squidwardtentacles"] = true,
-        ["j_crazymod_thebigcheese"] = true,
-        ["j_crazymod_thewinbuttonthejokertoendalljokers"] = true,
-        ["j_crazymod_thirtyminutesoritsfree"] = true,
-        ["j_crazymod_toilet"] = true,
-        ["j_crazymod_trafficmanager"] = true,
-        ["j_crazymod_tuxedomask"] = true,
         ["j_crazymod_vacantjoker"] = true,
-        ["j_crazymod_yuri"] = true
+        ["j_crazymod_pixeljoker"] = true,
+        ["j_crazymod_rekoj"] = true,
+        ["j_crazymod_j"] = true,
+        ["j_crazymod_grossmichel"] = true,
+        ["j_crazymod_flhorban920"] = true,
+        ["j_crazymod_bananaslamma"] = true,
+        ["j_crazymod_applecore"] = true,
+        ["j_crazymod_honeycrisp"] = true,
+        ["j_crazymod_grannysmith"] = true,
+        ["j_crazymod_goldendelicious"] = true,
+        ["j_crazymod_enchantedgoldenapple"] = true,
+        ["j_crazymod_badapple"] = true,
+        ["j_crazymod_plastictangerine"] = true,
+        ["j_crazymod_pizzabox"] = true,
+        ["j_crazymod_pineapplepizza"] = true,
+        ["j_crazymod_pizzaface"] = true,
+        ["j_crazymod_amore"] = true,
+        ["j_crazymod_dominos"] = true,
+        ["j_crazymod_pizzacrust"] = true,
+        ["j_crazymod_thirtyminutesoritsfree"] = true,
+        ["j_crazymod_bonniesfacepizza"] = true,
+        ["j_crazymod_chuckecheese"] = true,
+        ["j_crazymod_outpizzathehut"] = true,
+        ["j_crazymod_ethan"] = true,
+        ["j_crazymod_kris"] = true,
+        ["j_crazymod_lyra"] = true,
+        ["j_crazymod_silver"] = true,
+        ["j_crazymod_thebigcheese"] = true,
+        ["j_crazymod_lastbreath"] = true,
+        ["j_crazymod_opoc"] = true,
+        ["j_crazymod_freddyfazbear"] = true,
+        ["j_crazymod_funtimefoxy"] = true,
+        ["j_crazymod_squidwardtentacles"] = true,
+        ["j_crazymod_cutawaygag"] = true,
+        ["j_crazymod_revengeofringo"] = true,
+        ["j_crazymod_maliceofmaguro"] = true,
+        ["j_crazymod_resentmentofrisukuma"] = true,
+        ["j_crazymod_gachacapsule"] = true,
+        ["j_crazymod_toilet"] = true,
+        ["j_crazymod_chaostheory"] = true,
+        ["j_crazymod_happymeal"] = true,
+        ["j_crazymod_mathematicalhandboost"] = true,
+        ["j_crazymod_grilledcheese"] = true,
+        ["j_crazymod__2048"] = true,
+        ["j_crazymod_emerald"] = true,
+        ["j_crazymod_rushhour"] = true,
+        ["j_crazymod_sailormoon"] = true,
+        ["j_crazymod_sailormercury"] = true,
+        ["j_crazymod_sailormars"] = true,
+        ["j_crazymod_sailorjupiter"] = true,
+        ["j_crazymod_sailorvenus"] = true,
+        ["j_crazymod_sailorchibimoon"] = true,
+        ["j_crazymod_sailorpluto"] = true,
+        ["j_crazymod_sailoruranus"] = true,
+        ["j_crazymod_sailorneptune"] = true,
+        ["j_crazymod_sailorsaturn"] = true,
+        ["j_crazymod_tuxedomask"] = true,
+        ["j_crazymod_lunaandartemis"] = true,
+        ["j_crazymod_pokemonrgby"] = true,
+        ["j_crazymod_canvas"] = true,
+        ["j_crazymod_rivertrio"] = true,
+        ["j_crazymod_tertiarycolors"] = true,
+        ["j_crazymod_tux"] = true,
+        ["j_crazymod_hatsunemiku"] = true,
+        ["j_crazymod_kagaminelen"] = true,
+        ["j_crazymod_kagaminerin"] = true,
+        ["j_crazymod_megurineluka"] = true,
+        ["j_crazymod_meiko"] = true,
+        ["j_crazymod_kaito"] = true,
+        ["j_crazymod_gumi"] = true,
+        ["j_crazymod_camuigackpo"] = true,
+        ["j_crazymod_akitaneru"] = true,
+        ["j_crazymod_kasaneteto"] = true,
+        ["j_crazymod_monika"] = true,
+        ["j_crazymod_sayori"] = true,
+        ["j_crazymod_yuri"] = true,
+        ["j_crazymod_natsuki"] = true,
+        ["j_crazymod_mc"] = true,
+        ["j_crazymod_royalalchemy"] = true,
+        ["j_crazymod_blackcat"] = true,
+        ["j_crazymod_whitecat"] = true,
+        ["j_crazymod_graycat"] = true,
+        ["j_crazymod_pyramidscheme"] = true,
+        ["j_crazymod_crazydave"] = true,
+        ["j_crazymod_repeater"] = true,
+        ["j_crazymod_bemeebeth"] = true,
+        ["j_crazymod_asteroid"] = true,
+        ["j_crazymod_miyakoakiyama"] = true,
+        ["j_crazymod_spesashworth"] = true,
+        ["j_crazymod_hezlyahonen"] = true,
+        ["j_crazymod_dianaaddison"] = true,
+        ["j_crazymod_cloveracker"] = true,
+        ["j_crazymod_thewinbuttonthejokertoendalljokers"] = true
     },
 })
 
 SMODS.ObjectType({
     key = "crazymod_cliche_deck_jokers",
     cards = {
-        ["j_crazymod__2048"] = true,
-        ["j_crazymod_akitaneru"] = true,
-        ["j_crazymod_amore"] = true,
-        ["j_crazymod_applecore"] = true,
-        ["j_crazymod_badapple"] = true,
-        ["j_crazymod_bemeebeth"] = true,
-        ["j_crazymod_bonniesfacepizza"] = true,
-        ["j_crazymod_camuigackpo"] = true,
-        ["j_crazymod_canvas"] = true,
-        ["j_crazymod_chaostheory"] = true,
-        ["j_crazymod_chuckecheese"] = true,
-        ["j_crazymod_crazydave"] = true,
-        ["j_crazymod_cutawaygag"] = true,
-        ["j_crazymod_dominos"] = true,
-        ["j_crazymod_emerald"] = true,
-        ["j_crazymod_ethan"] = true,
-        ["j_crazymod_flhorban920"] = true,
-        ["j_crazymod_freddyfazbear"] = true,
-        ["j_crazymod_gachacapsule"] = true,
-        ["j_crazymod_goldendelicious"] = true,
-        ["j_crazymod_grannysmith"] = true,
-        ["j_crazymod_grilledcheese"] = true,
-        ["j_crazymod_grossmichel"] = true,
-        ["j_crazymod_gumi"] = true,
-        ["j_crazymod_happymeal"] = true,
-        ["j_crazymod_hatsunemiku"] = true,
-        ["j_crazymod_honeycrisp"] = true,
-        ["j_crazymod_j"] = true,
+        ["j_crazymod_otherjoker"] = true,
         ["j_crazymod_jokerbutbetter"] = true,
         ["j_crazymod_jokerbutevenmorebetter"] = true,
-        ["j_crazymod_kagaminelen"] = true,
-        ["j_crazymod_kagaminerin"] = true,
-        ["j_crazymod_kaito"] = true,
-        ["j_crazymod_kasaneteto"] = true,
-        ["j_crazymod_kris"] = true,
-        ["j_crazymod_lastbreath"] = true,
-        ["j_crazymod_lunaandartemis"] = true,
-        ["j_crazymod_lyra"] = true,
-        ["j_crazymod_mathematicalhandboost"] = true,
-        ["j_crazymod_megurineluka"] = true,
-        ["j_crazymod_meiko"] = true,
-        ["j_crazymod_otherjoker"] = true,
         ["j_crazymod_otherjokerbutbetter"] = true,
         ["j_crazymod_otherjokerbutevenmorebetter"] = true,
         ["j_crazymod_otherotherjoker"] = true,
-        ["j_crazymod_pineapplepizza"] = true,
+        ["j_crazymod_vacantjoker"] = true,
         ["j_crazymod_pixeljoker"] = true,
-        ["j_crazymod_pizzabox"] = true,
-        ["j_crazymod_pizzacrust"] = true,
-        ["j_crazymod_pizzaface"] = true,
-        ["j_crazymod_plastictangerine"] = true,
-        ["j_crazymod_pokemonrgby"] = true,
         ["j_crazymod_rekoj"] = true,
-        ["j_crazymod_ringosrevenge"] = true,
-        ["j_crazymod_sailorchibimoon"] = true,
-        ["j_crazymod_sailorjupiter"] = true,
-        ["j_crazymod_sailormars"] = true,
-        ["j_crazymod_sailormercury"] = true,
-        ["j_crazymod_sailormoon"] = true,
-        ["j_crazymod_sailorneptune"] = true,
-        ["j_crazymod_sailorpluto"] = true,
-        ["j_crazymod_sailorsaturn"] = true,
-        ["j_crazymod_sailoruranus"] = true,
-        ["j_crazymod_sailorvenus"] = true,
-        ["j_crazymod_silver"] = true,
-        ["j_crazymod_squidwardtentacles"] = true,
-        ["j_crazymod_thebigcheese"] = true,
+        ["j_crazymod_j"] = true,
+        ["j_crazymod_grossmichel"] = true,
+        ["j_crazymod_flhorban920"] = true,
+        ["j_crazymod_applecore"] = true,
+        ["j_crazymod_honeycrisp"] = true,
+        ["j_crazymod_grannysmith"] = true,
+        ["j_crazymod_goldendelicious"] = true,
+        ["j_crazymod_badapple"] = true,
+        ["j_crazymod_plastictangerine"] = true,
+        ["j_crazymod_pizzabox"] = true,
+        ["j_crazymod_pineapplepizza"] = true,
+        ["j_crazymod_pizzaface"] = true,
+        ["j_crazymod_amore"] = true,
+        ["j_crazymod_dominos"] = true,
+        ["j_crazymod_pizzacrust"] = true,
         ["j_crazymod_thirtyminutesoritsfree"] = true,
+        ["j_crazymod_bonniesfacepizza"] = true,
+        ["j_crazymod_chuckecheese"] = true,
+        ["j_crazymod_ethan"] = true,
+        ["j_crazymod_kris"] = true,
+        ["j_crazymod_lyra"] = true,
+        ["j_crazymod_silver"] = true,
+        ["j_crazymod_thebigcheese"] = true,
+        ["j_crazymod_lastbreath"] = true,
+        ["j_crazymod_freddyfazbear"] = true,
+        ["j_crazymod_funtimefoxy"] = true,
+        ["j_crazymod_squidwardtentacles"] = true,
+        ["j_crazymod_cutawaygag"] = true,
+        ["j_crazymod_revengeofringo"] = true,
+        ["j_crazymod_gachacapsule"] = true,
         ["j_crazymod_toilet"] = true,
-        ["j_crazymod_trafficmanager"] = true,
+        ["j_crazymod_chaostheory"] = true,
+        ["j_crazymod_happymeal"] = true,
+        ["j_crazymod_mathematicalhandboost"] = true,
+        ["j_crazymod_grilledcheese"] = true,
+        ["j_crazymod__2048"] = true,
+        ["j_crazymod_emerald"] = true,
+        ["j_crazymod_sailormoon"] = true,
+        ["j_crazymod_sailormercury"] = true,
+        ["j_crazymod_sailormars"] = true,
+        ["j_crazymod_sailorjupiter"] = true,
+        ["j_crazymod_sailorvenus"] = true,
+        ["j_crazymod_sailorchibimoon"] = true,
+        ["j_crazymod_sailorpluto"] = true,
+        ["j_crazymod_sailoruranus"] = true,
+        ["j_crazymod_sailorneptune"] = true,
+        ["j_crazymod_sailorsaturn"] = true,
         ["j_crazymod_tuxedomask"] = true,
-        ["j_crazymod_vacantjoker"] = true
-    },
-})
-
-SMODS.ObjectType({
-    key = "crazymod_crazymod_vocaloid",
-    cards = {
-        ["j_crazymod_akitaneru"] = true,
-        ["j_crazymod_camuigackpo"] = true,
-        ["j_crazymod_gumi"] = true,
+        ["j_crazymod_lunaandartemis"] = true,
+        ["j_crazymod_pokemonrgby"] = true,
+        ["j_crazymod_canvas"] = true,
         ["j_crazymod_hatsunemiku"] = true,
         ["j_crazymod_kagaminelen"] = true,
         ["j_crazymod_kagaminerin"] = true,
-        ["j_crazymod_kaito"] = true,
-        ["j_crazymod_kasaneteto"] = true,
         ["j_crazymod_megurineluka"] = true,
-        ["j_crazymod_meiko"] = true
-    },
-})
-
-SMODS.ObjectType({
-    key = "crazymod_pizza_jokers",
-    cards = {
-        ["j_crazymod_amore"] = true,
-        ["j_crazymod_bonniesfacepizza"] = true,
-        ["j_crazymod_chuckecheese"] = true,
-        ["j_crazymod_dominos"] = true,
-        ["j_crazymod_outpizzathehut"] = true,
-        ["j_crazymod_pineapplepizza"] = true,
-        ["j_crazymod_pizzabox"] = true,
-        ["j_crazymod_pizzacrust"] = true,
-        ["j_crazymod_pizzaface"] = true,
-        ["j_crazymod_thirtyminutesoritsfree"] = true
+        ["j_crazymod_meiko"] = true,
+        ["j_crazymod_kaito"] = true,
+        ["j_crazymod_gumi"] = true,
+        ["j_crazymod_camuigackpo"] = true,
+        ["j_crazymod_akitaneru"] = true,
+        ["j_crazymod_kasaneteto"] = true,
+        ["j_crazymod_crazydave"] = true,
+        ["j_crazymod_bemeebeth"] = true
     },
 })
 
 SMODS.ObjectType({
     key = "crazymod_Food",
     cards = {
-        ["j_crazymod_applecore"] = true,
-        ["j_crazymod_badapple"] = true,
-        ["j_crazymod_bananaslamma"] = true,
-        ["j_crazymod_enchantedgoldenapple"] = true,
-        ["j_crazymod_flhorban920"] = true,
-        ["j_crazymod_goldendelicious"] = true,
-        ["j_crazymod_grannysmith"] = true,
         ["j_crazymod_grossmichel"] = true,
-        ["j_crazymod_honeycrisp"] = true
+        ["j_crazymod_flhorban920"] = true,
+        ["j_crazymod_bananaslamma"] = true,
+        ["j_crazymod_applecore"] = true,
+        ["j_crazymod_honeycrisp"] = true,
+        ["j_crazymod_grannysmith"] = true,
+        ["j_crazymod_goldendelicious"] = true,
+        ["j_crazymod_enchantedgoldenapple"] = true,
+        ["j_crazymod_badapple"] = true
+    },
+})
+
+SMODS.ObjectType({
+    key = "crazymod_pizza_jokers",
+    cards = {
+        ["j_crazymod_pizzabox"] = true,
+        ["j_crazymod_pineapplepizza"] = true,
+        ["j_crazymod_pizzaface"] = true,
+        ["j_crazymod_amore"] = true,
+        ["j_crazymod_dominos"] = true,
+        ["j_crazymod_pizzacrust"] = true,
+        ["j_crazymod_thirtyminutesoritsfree"] = true,
+        ["j_crazymod_bonniesfacepizza"] = true,
+        ["j_crazymod_chuckecheese"] = true,
+        ["j_crazymod_outpizzathehut"] = true
     },
 })
 
 SMODS.ObjectType({
     key = "crazymod_crazymod_sailormoon",
     cards = {
-        ["j_crazymod_lunaandartemis"] = true,
-        ["j_crazymod_sailorchibimoon"] = true,
-        ["j_crazymod_sailorjupiter"] = true,
-        ["j_crazymod_sailormars"] = true,
-        ["j_crazymod_sailormercury"] = true,
         ["j_crazymod_sailormoon"] = true,
-        ["j_crazymod_sailorneptune"] = true,
-        ["j_crazymod_sailorpluto"] = true,
-        ["j_crazymod_sailorsaturn"] = true,
-        ["j_crazymod_sailoruranus"] = true,
+        ["j_crazymod_sailormercury"] = true,
+        ["j_crazymod_sailormars"] = true,
+        ["j_crazymod_sailorjupiter"] = true,
         ["j_crazymod_sailorvenus"] = true,
-        ["j_crazymod_tuxedomask"] = true
+        ["j_crazymod_sailorchibimoon"] = true,
+        ["j_crazymod_sailorpluto"] = true,
+        ["j_crazymod_sailoruranus"] = true,
+        ["j_crazymod_sailorneptune"] = true,
+        ["j_crazymod_sailorsaturn"] = true,
+        ["j_crazymod_tuxedomask"] = true,
+        ["j_crazymod_lunaandartemis"] = true
+    },
+})
+
+SMODS.ObjectType({
+    key = "crazymod_crazymod_vocaloid",
+    cards = {
+        ["j_crazymod_hatsunemiku"] = true,
+        ["j_crazymod_kagaminelen"] = true,
+        ["j_crazymod_kagaminerin"] = true,
+        ["j_crazymod_megurineluka"] = true,
+        ["j_crazymod_meiko"] = true,
+        ["j_crazymod_kaito"] = true,
+        ["j_crazymod_gumi"] = true,
+        ["j_crazymod_camuigackpo"] = true,
+        ["j_crazymod_akitaneru"] = true,
+        ["j_crazymod_kasaneteto"] = true
     },
 })
 
 SMODS.ObjectType({
     key = "crazymod_crazymod_ddlc",
     cards = {
-        ["j_crazymod_mc"] = true,
         ["j_crazymod_monika"] = true,
-        ["j_crazymod_natsuki"] = true,
         ["j_crazymod_sayori"] = true,
-        ["j_crazymod_yuri"] = true
+        ["j_crazymod_yuri"] = true,
+        ["j_crazymod_natsuki"] = true,
+        ["j_crazymod_mc"] = true
     },
 })
 

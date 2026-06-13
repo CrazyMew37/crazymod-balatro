@@ -18,7 +18,7 @@ SMODS.Joker{ --Megurine Luka
         }
     },
     pos = {
-        x = 0,
+        x = 5,
         y = 7
     },
     display_size = {

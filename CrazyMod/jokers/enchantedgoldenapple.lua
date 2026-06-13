@@ -11,7 +11,7 @@ SMODS.Joker{ --Enchanted Golden Apple
     loc_txt = {
         ['name'] = 'Enchanted Golden Apple',
         ['text'] = {
-            [1] = '{X:enhanced,C:edition}^^#1#{} Chips',
+            [1] = '{X:chips,C:edition}^^#1#{} Chips',
             [2] = '{C:green}#2# in #3#{} chance for Ringo',
             [3] = 'Ando to eat this card at',
             [4] = 'the end of the round'

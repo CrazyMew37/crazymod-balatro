@@ -18,7 +18,7 @@ SMODS.Joker{ --Chaos Theory
         }
     },
     pos = {
-        x = 5,
+        x = 7,
         y = 4
     },
     display_size = {

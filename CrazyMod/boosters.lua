@@ -12,7 +12,6 @@ SMODS.Booster {
     atlas = "CustomBoosters",
     pos = { x = 0, y = 0 },
     kind = 'Paint Color',
-    group_key = "k_palette_packs",
     select_card = "consumeables",
     discovered = true,
     loc_vars = function(self, info_queue, card)
@@ -174,7 +173,6 @@ SMODS.Booster {
     atlas = "CustomBoosters",
     pos = { x = 1, y = 0 },
     kind = 'Paint Color',
-    group_key = "k_palette_packs",
     select_card = "consumeables",
     discovered = true,
     loc_vars = function(self, info_queue, card)
@@ -337,7 +335,6 @@ SMODS.Booster {
     atlas = "CustomBoosters",
     pos = { x = 2, y = 0 },
     kind = 'Paint Color',
-    group_key = "k_palette_packs",
     select_card = "consumeables",
     discovered = true,
     loc_vars = function(self, info_queue, card)
@@ -501,7 +498,6 @@ SMODS.Booster {
     atlas = "CustomBoosters",
     pos = { x = 3, y = 0 },
     kind = 'Paint Color',
-    group_key = "k_palette_packs",
     select_card = "consumeables",
     discovered = true,
     loc_vars = function(self, info_queue, card)

@@ -3,8 +3,8 @@ SMODS.Joker{ --Sailor Saturn
     key = "sailorsaturn",
     config = {
         extra = {
-            SailorChips = -45,
-            SailorMult = -6,
+            SailorSlots = 1,
+            SailorBooster = 1,
             levels0 = 1
         }
     },
@@ -13,14 +13,15 @@ SMODS.Joker{ --Sailor Saturn
         ['text'] = {
             [1] = 'Level up {C:attention}Straight{}',
             [2] = 'every round',
-            [3] = '{C:blue}#1#{} Chips, {C:red}#2#{} Mult'
+            [3] = '{C:red}-#1#{} Shop Slot',
+            [4] = '{C:red}-#2#{} Booster Slot'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 0,
+        x = 3,
         y = 6
     },
     display_size = {
@@ -39,7 +40,7 @@ SMODS.Joker{ --Sailor Saturn
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.SailorChips, card.ability.extra.SailorMult}}
+        return {vars = {card.ability.extra.SailorSlots, card.ability.extra.SailorBooster}}
     end,
     
     calculate = function(self, card, context)
@@ -50,13 +51,15 @@ SMODS.Joker{ --Sailor Saturn
                 message = localize('k_level_up_ex')
             }
         end
-        if context.cardarea == G.jokers and context.joker_main  then
-            return {
-                chips = card.ability.extra.SailorChips,
-                extra = {
-                    mult = card.ability.extra.SailorMult
-                }
-            }
-        end
+    end,
+    
+    add_to_deck = function(self, card, from_debuff)
+        change_shop_size(-card.ability.extra.SailorSlots)
+        SMODS.change_booster_limit(-card.ability.extra.SailorBooster)
+    end,
+    
+    remove_from_deck = function(self, card, from_debuff)
+        change_shop_size(card.ability.extra.SailorSlots)
+        SMODS.change_booster_limit(card.ability.extra.SailorBooster)
     end
 }

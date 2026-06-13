@@ -9,7 +9,7 @@ SMODS.Joker{ --Joker but Even More Better
     loc_txt = {
         ['name'] = 'Joker but Even More Better',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^#1#{} Mult',
+            [1] = '{X:mult,C:money}^#1#{} Mult',
             [2] = '{s:0.75,C:inactive}\"I\'m Jimbo\'s weird{}',
             [3] = '{s:0.75,C:inactive}great uncle, Jombo!\"{}'
         },

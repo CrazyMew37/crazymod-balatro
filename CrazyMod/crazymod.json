@@ -7,7 +7,7 @@
   "description": "A Crazy Mod by Crazy ol' CrazyMew37 for you Crazy People",
   "prefix": "crazymod",
   "main_file": "main.lua",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "priority": 0,
   "badge_colour": "00cc66",
   "badge_text_colour": "FFFFFF",

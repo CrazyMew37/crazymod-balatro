@@ -22,8 +22,8 @@ SMODS.Joker{ --Last Breath
         }
     },
     pos = {
-        x = 1,
-        y = 4
+        x = 5,
+        y = 3
     },
     display_size = {
         w = 71 * 1, 

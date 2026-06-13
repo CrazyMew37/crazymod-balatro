@@ -17,7 +17,7 @@ SMODS.Joker{ --GUMI
         }
     },
     pos = {
-        x = 3,
+        x = 8,
         y = 7
     },
     display_size = {
@@ -41,7 +41,14 @@ SMODS.Joker{ --GUMI
                 func = function()
                     
                     assert(SMODS.change_base(scored_card, pseudorandom_element(SMODS.Suits, 'edit_card_suit').key, pseudorandom_element(SMODS.Ranks, 'edit_card_rank').key))
-                    scored_card:set_ability(G.P_CENTERS.c_base)
+                    local enhancement_pool = {}
+                    for _, enhancement in pairs(G.P_CENTER_POOLS.Enhanced) do
+                        if enhancement.key ~= 'm_stone' then
+                            enhancement_pool[#enhancement_pool + 1] = enhancement
+                        end
+                    end
+                    local random_enhancement = pseudorandom_element(enhancement_pool, 'edit_card_enhancement')
+                    scored_card:set_ability(random_enhancement)
                     scored_card:set_seal("crazymod_musicalseal", true)
                     card_eval_status_text(scored_card, 'extra', nil, nil, nil, {message = "Card Modified!", colour = G.C.ORANGE})
                     return true

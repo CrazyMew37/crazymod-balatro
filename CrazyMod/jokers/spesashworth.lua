@@ -10,7 +10,7 @@ SMODS.Joker{ --Spes Ashworth
     loc_txt = {
         ['name'] = 'Spes Ashworth',
         ['text'] = {
-            [1] = 'Played {C:spades}Ace of Spades{} score {X:enhanced,C:edition}^^1.11{} Mult',
+            [1] = 'Played {C:spades}Ace of Spades{} score {X:mult,C:edition}^^1.11{} Mult',
             [2] = '{C:inactive,s:0.75}\"The leader of the Ace Mages. She might be an anxious{}',
             [3] = '{C:inactive,s:0.75}mess, but her magic skills are unmatched in Casina.\"{}'
         },
@@ -19,8 +19,8 @@ SMODS.Joker{ --Spes Ashworth
         }
     },
     pos = {
-        x = 5,
-        y = 9
+        x = 6,
+        y = 10
     },
     display_size = {
         w = 71 * 1, 

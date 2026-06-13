@@ -10,7 +10,7 @@ SMODS.Joker{ --Flhorban 920
     loc_txt = {
         ['name'] = 'Flhorban 920',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^#1#{} Mult',
+            [1] = '{X:mult,C:money}^#1#{} Mult',
             [2] = '{C:green}#2# in #3#{} chance this',
             [3] = 'card is destroyed at the',
             [4] = 'end of the round'

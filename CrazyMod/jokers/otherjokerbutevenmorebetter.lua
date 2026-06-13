@@ -9,7 +9,7 @@ SMODS.Joker{ --Other Joker but Even More Better
     loc_txt = {
         ['name'] = 'Other Joker but Even More Better',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^#1#{} Chips',
+            [1] = '{X:chips,C:money}^#1#{} Chips',
             [2] = '{s:0.75,C:inactive}\"I\'m Jymbo! I\'m not{}',
             [3] = '{s:0.75,C:inactive}related to anyone!\"{}'
         },

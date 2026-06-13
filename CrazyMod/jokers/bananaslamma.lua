@@ -11,7 +11,7 @@ SMODS.Joker{ --BANANA SLAMMA
     loc_txt = {
         ['name'] = 'BANANA SLAMMA',
         ['text'] = {
-            [1] = '{X:enhanced,C:edition}^^#1#{} Mult',
+            [1] = '{X:mult,C:edition}^^#1#{} Mult',
             [2] = '{C:green}#2# in #3#{} chance this',
             [3] = 'card is destroyed at the',
             [4] = 'end of the round'

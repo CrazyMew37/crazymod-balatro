@@ -10,7 +10,7 @@ SMODS.Joker{ --Kasane Teto
         ['name'] = 'Kasane Teto',
         ['text'] = {
             [1] = 'Cards with a {C:planet}Musical Seal{}',
-            [2] = 'give an additonal {X:enhanced,C:white}^#1#{}',
+            [2] = 'give an additonal {X:mult,C:money}^#1#{}',
             [3] = 'Mult when scored'
         },
         ['unlock'] = {
@@ -18,8 +18,8 @@ SMODS.Joker{ --Kasane Teto
         }
     },
     pos = {
-        x = 6,
-        y = 7
+        x = 1,
+        y = 8
     },
     display_size = {
         w = 71 * 1, 

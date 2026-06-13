@@ -9,7 +9,7 @@ SMODS.Joker{ --OP OC
     loc_txt = {
         ['name'] = 'OP OC',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^#1#{} Chips and Mult',
+            [1] = '{X:purple,C:money}^#1#{} Chips and Mult',
             [2] = '{s:0.75,C:inactive}\"Mary Sue? I barely know you!\"{}'
         },
         ['unlock'] = {

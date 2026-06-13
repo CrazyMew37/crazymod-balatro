@@ -17,8 +17,8 @@ SMODS.Joker{ --Monika
         }
     },
     pos = {
-        x = 7,
-        y = 7
+        x = 2,
+        y = 8
     },
     display_size = {
         w = 71 * 1, 
@@ -34,8 +34,8 @@ SMODS.Joker{ --Monika
     atlas = 'CustomJokers',
     pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_crazymod_ddlc"] = true },
     soul_pos = {
-        x = 8,
-        y = 7
+        x = 3,
+        y = 8
     },
     in_pool = function(self, args)
         return (

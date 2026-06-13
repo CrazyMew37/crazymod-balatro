@@ -9,7 +9,7 @@ SMODS.Joker{ --BeMeebEth
     loc_txt = {
         ['name'] = 'BeMeebEth',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^#1#{} Mult if played hand',
+            [1] = '{X:mult,C:money}^#1#{} Mult if played hand',
             [2] = 'contains a {C:attention}Five of a Kind{}'
         },
         ['unlock'] = {
@@ -17,8 +17,8 @@ SMODS.Joker{ --BeMeebEth
         }
     },
     pos = {
-        x = 4,
-        y = 9
+        x = 3,
+        y = 10
     },
     display_size = {
         w = 71 * 1, 

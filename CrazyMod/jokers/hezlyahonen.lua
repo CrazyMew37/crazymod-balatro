@@ -10,7 +10,7 @@ SMODS.Joker{ --Hezly Ahonen
     loc_txt = {
         ['name'] = 'Hezly Ahonen',
         ['text'] = {
-            [1] = 'Played {C:hearts}Ace of Hearts{} score {X:enhanced,C:edition}^^1.11{} Mult',
+            [1] = 'Played {C:hearts}Ace of Hearts{} score {X:mult,C:edition}^^1.11{} Mult',
             [2] = '{C:inactive,s:0.75}\"A rather lax mage. She\'s known to be quite flirty,{}',
             [3] = '{C:inactive,s:0.75}much to the dismay of her partners.\"{}'
         },
@@ -19,8 +19,8 @@ SMODS.Joker{ --Hezly Ahonen
         }
     },
     pos = {
-        x = 6,
-        y = 9
+        x = 7,
+        y = 10
     },
     display_size = {
         w = 71 * 1, 

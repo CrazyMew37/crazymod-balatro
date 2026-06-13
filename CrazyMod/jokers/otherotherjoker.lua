@@ -3,7 +3,7 @@ SMODS.Joker{ --Other Other Joker
     key = "otherotherjoker",
     config = {
         extra = {
-            JwmboMult = 1.02,
+            JwmboMult = 1.01,
             hyperchips_arrows0 = 2,
             hypermult_arrows0 = 2
         }
@@ -11,7 +11,7 @@ SMODS.Joker{ --Other Other Joker
     loc_txt = {
         ['name'] = 'Other Other Joker',
         ['text'] = {
-            [1] = '{X:enhanced,C:edition}^^#1#{} Chips and Mult if',
+            [1] = '{X:purple,C:edition}^^#1#{} Chips and Mult if',
             [2] = 'hand does {C:attention}not{} contain',
             [3] = 'a {C:attention}Pair{}',
             [4] = '{s:0.75,C:inactive}\"I\'m Jwmbo. I hate being Jolly.\"{}'

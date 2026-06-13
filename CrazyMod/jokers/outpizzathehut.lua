@@ -10,7 +10,7 @@ SMODS.Joker{ --Out Pizza the Hut
         ['name'] = 'Out Pizza the Hut',
         ['text'] = {
             [1] = 'Scored {C:attention}Pizza Cards{} gain',
-            [2] = 'an additional {X:enhanced,C:white}^#1#{} Chips'
+            [2] = 'an additional {X:chips,C:money}^#1#{} Chips'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'

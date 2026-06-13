@@ -18,7 +18,7 @@ SMODS.Joker{ --Camui Gackpo
         }
     },
     pos = {
-        x = 4,
+        x = 9,
         y = 7
     },
     display_size = {

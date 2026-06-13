@@ -11,8 +11,8 @@ SMODS.Back {
         name = 'Literature Deck',
         text = {
             [1] = 'Begin with an Eternal',
-            [2] = '{C:green}Monika{}, {C:planet}Sayori{}, {C:tarot}Yuri{},',
-            [3] = '{C:red}Natsuki{}, and {C:gold}MC{}',
+            [2] = '{C:green}Monika{}, {C:planet}Sayori{}, {C:enhanced}Yuri{},',
+            [3] = '{C:purple}Natsuki{}, and {C:red}MC{}',
             [4] = '{X:attention,C:white}X25000{} Blind Requirement',
             [5] = '{C:green}\"I might have messed up that part of the code...\"{}'
         },

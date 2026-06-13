@@ -17,7 +17,7 @@ SMODS.Joker{ --Yuri
         }
     },
     pos = {
-        x = 1,
+        x = 6,
         y = 8
     },
     display_size = {
@@ -34,7 +34,7 @@ SMODS.Joker{ --Yuri
     atlas = 'CustomJokers',
     pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_crazymod_ddlc"] = true },
     soul_pos = {
-        x = 2,
+        x = 7,
         y = 8
     },
     in_pool = function(self, args)
