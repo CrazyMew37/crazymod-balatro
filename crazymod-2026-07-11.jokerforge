@@ -14942,27 +14942,31 @@
               "params": {
                 "joker_type": {
                   "value": "specific",
-                  "label": "Specific Joker",
                   "valueType": "text"
                 },
                 "rarity": {
-                  "value": "random"
+                  "value": "random",
+                  "valueType": "unknown"
                 },
                 "joker_key": {
                   "value": "crazymod_chicken",
                   "valueType": "text"
                 },
                 "pool": {
-                  "value": ""
+                  "value": "",
+                  "valueType": "unknown"
                 },
                 "edition": {
-                  "value": "none"
+                  "value": "none",
+                  "valueType": "unknown"
                 },
                 "sticker": {
-                  "value": "none"
+                  "value": "none",
+                  "valueType": "unknown"
                 },
                 "ignore_slots": {
-                  "value": "respect"
+                  "value": "respect",
+                  "valueType": "unknown"
                 }
               }
             }
@@ -15200,129 +15204,6 @@
                     }
                   },
                   "operator": "or"
-                },
-                {
-                  "id": "37b7fcc7-4dc4-465d-bff5-9f807a13e5ba",
-                  "type": "rank_count",
-                  "negate": false,
-                  "params": {
-                    "card_scope": {
-                      "value": "scoring",
-                      "valueType": "unknown"
-                    },
-                    "rank_type": {
-                      "value": "specific",
-                      "valueType": "text"
-                    },
-                    "specific_rank": {
-                      "value": "4",
-                      "valueType": "text"
-                    },
-                    "rank_group": {
-                      "valueType": "unknown"
-                    },
-                    "quantifier": {
-                      "value": "all",
-                      "valueType": "text"
-                    },
-                    "count": {
-                      "value": 1,
-                      "valueType": "number"
-                    }
-                  },
-                  "operator": "or"
-                },
-                {
-                  "id": "d7953adc-c294-44f5-957c-3e812f2e6098",
-                  "type": "rank_count",
-                  "negate": false,
-                  "params": {
-                    "card_scope": {
-                      "value": "scoring",
-                      "valueType": "unknown"
-                    },
-                    "rank_type": {
-                      "value": "specific",
-                      "valueType": "text"
-                    },
-                    "specific_rank": {
-                      "value": "3",
-                      "valueType": "text"
-                    },
-                    "rank_group": {
-                      "valueType": "unknown"
-                    },
-                    "quantifier": {
-                      "value": "all",
-                      "valueType": "text"
-                    },
-                    "count": {
-                      "value": 1,
-                      "valueType": "number"
-                    }
-                  },
-                  "operator": "or"
-                },
-                {
-                  "id": "2508959a-77f0-4105-9554-6ac390e701fa",
-                  "type": "rank_count",
-                  "negate": false,
-                  "params": {
-                    "card_scope": {
-                      "value": "scoring",
-                      "valueType": "text"
-                    },
-                    "rank_type": {
-                      "value": "specific",
-                      "valueType": "text"
-                    },
-                    "specific_rank": {
-                      "value": "2",
-                      "valueType": "text"
-                    },
-                    "rank_group": {
-                      "valueType": "unknown"
-                    },
-                    "quantifier": {
-                      "value": "all",
-                      "valueType": "text"
-                    },
-                    "count": {
-                      "value": 1,
-                      "valueType": "number"
-                    }
-                  },
-                  "operator": "or"
-                },
-                {
-                  "id": "9bd16ecd-bbea-4b99-ad29-1bb70f52ad3b",
-                  "type": "rank_count",
-                  "negate": false,
-                  "params": {
-                    "card_scope": {
-                      "value": "scoring",
-                      "valueType": "text"
-                    },
-                    "rank_type": {
-                      "value": "specific",
-                      "valueType": "text"
-                    },
-                    "specific_rank": {
-                      "value": "A",
-                      "valueType": "text"
-                    },
-                    "rank_group": {
-                      "valueType": "unknown"
-                    },
-                    "quantifier": {
-                      "value": "all",
-                      "valueType": "text"
-                    },
-                    "count": {
-                      "value": 1,
-                      "valueType": "number"
-                    }
-                  }
                 }
               ]
             }
@@ -15344,6 +15225,358 @@
           "position": {
             "x": 567,
             "y": 176
+          }
+        },
+        {
+          "id": "847c8178-0461-4f04-8b96-0d0fa10e867d",
+          "trigger": "hand_played",
+          "blueprintCompatible": true,
+          "conditionGroups": [
+            {
+              "id": "1d9f4e2f-52ed-45d2-aaee-d6489868238c",
+              "operator": "and",
+              "conditions": [
+                {
+                  "id": "162ffce8-57a6-494a-b47c-2b19c1e95542",
+                  "type": "hand_type",
+                  "negate": false,
+                  "params": {
+                    "card_scope": {
+                      "value": "scoring",
+                      "valueType": "text"
+                    },
+                    "operator": {
+                      "value": "equals",
+                      "valueType": "text"
+                    },
+                    "value": {
+                      "value": "Pair",
+                      "valueType": "text"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "9bec22bd-577d-4d3f-b63a-44da7ebe72e3",
+              "operator": "and",
+              "conditions": [
+                {
+                  "id": "4eba549c-c97a-4db5-b5ba-b17fdad2c9f3",
+                  "type": "rank_count",
+                  "negate": false,
+                  "params": {
+                    "card_scope": {
+                      "value": "scoring",
+                      "valueType": "text"
+                    },
+                    "rank_type": {
+                      "value": "specific",
+                      "valueType": "text"
+                    },
+                    "specific_rank": {
+                      "value": "4",
+                      "label": "4",
+                      "valueType": "text"
+                    },
+                    "rank_group": {
+                      "valueType": "unknown"
+                    },
+                    "quantifier": {
+                      "value": "all",
+                      "valueType": "text"
+                    },
+                    "count": {
+                      "value": 1,
+                      "valueType": "number"
+                    }
+                  },
+                  "operator": "or"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "id": "b54c2172-986d-4964-84b2-8fc94c0925cd",
+              "type": "apply_x_mult",
+              "params": {
+                "value": {
+                  "value": "BlissMult",
+                  "valueType": "user_var"
+                }
+              }
+            }
+          ],
+          "randomGroups": [],
+          "loops": [],
+          "position": {
+            "x": 892,
+            "y": 176
+          }
+        },
+        {
+          "id": "369e2051-4555-4a39-90d9-f2a576d9223b",
+          "trigger": "hand_played",
+          "blueprintCompatible": true,
+          "conditionGroups": [
+            {
+              "id": "191d55a3-6915-420c-9a95-e063f84d52df",
+              "operator": "and",
+              "conditions": [
+                {
+                  "id": "e55431b4-ea6a-432e-a244-1016de67467b",
+                  "type": "hand_type",
+                  "negate": false,
+                  "params": {
+                    "card_scope": {
+                      "value": "scoring",
+                      "valueType": "text"
+                    },
+                    "operator": {
+                      "value": "equals",
+                      "valueType": "text"
+                    },
+                    "value": {
+                      "value": "Pair",
+                      "valueType": "text"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ca890a84-8f2e-40eb-80f7-7f65c10b4481",
+              "operator": "and",
+              "conditions": [
+                {
+                  "id": "f3baa0c4-5053-4b46-85ee-75c1488227dc",
+                  "type": "rank_count",
+                  "negate": false,
+                  "params": {
+                    "card_scope": {
+                      "value": "scoring",
+                      "valueType": "text"
+                    },
+                    "rank_type": {
+                      "value": "specific",
+                      "valueType": "text"
+                    },
+                    "specific_rank": {
+                      "value": "3",
+                      "label": "3",
+                      "valueType": "text"
+                    },
+                    "rank_group": {
+                      "valueType": "unknown"
+                    },
+                    "quantifier": {
+                      "value": "all",
+                      "valueType": "text"
+                    },
+                    "count": {
+                      "value": 1,
+                      "valueType": "number"
+                    }
+                  },
+                  "operator": "or"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "id": "83035916-e10b-4fcc-97ce-335f7fbec7d0",
+              "type": "apply_x_mult",
+              "params": {
+                "value": {
+                  "value": "BlissMult",
+                  "valueType": "user_var"
+                }
+              }
+            }
+          ],
+          "randomGroups": [],
+          "loops": [],
+          "position": {
+            "x": 1218,
+            "y": 176
+          }
+        },
+        {
+          "id": "25d976df-f5cb-4d62-af52-a13358d64e7f",
+          "trigger": "hand_played",
+          "blueprintCompatible": true,
+          "conditionGroups": [
+            {
+              "id": "d57af4f1-f590-4d1a-a828-daac1dfd557a",
+              "operator": "and",
+              "conditions": [
+                {
+                  "id": "d8d0f0f5-314f-4918-bbf7-9d0b21dbb6d0",
+                  "type": "hand_type",
+                  "negate": false,
+                  "params": {
+                    "card_scope": {
+                      "value": "scoring",
+                      "valueType": "text"
+                    },
+                    "operator": {
+                      "value": "equals",
+                      "valueType": "text"
+                    },
+                    "value": {
+                      "value": "Pair",
+                      "valueType": "text"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "f38ca86f-8d29-4834-917e-3533ceb50c68",
+              "operator": "and",
+              "conditions": [
+                {
+                  "id": "fbab5653-1651-4f12-9862-2175af9b51a2",
+                  "type": "rank_count",
+                  "negate": false,
+                  "params": {
+                    "card_scope": {
+                      "value": "scoring",
+                      "valueType": "text"
+                    },
+                    "rank_type": {
+                      "value": "specific",
+                      "valueType": "text"
+                    },
+                    "specific_rank": {
+                      "value": "2",
+                      "label": "2",
+                      "valueType": "text"
+                    },
+                    "rank_group": {
+                      "valueType": "unknown"
+                    },
+                    "quantifier": {
+                      "value": "all",
+                      "valueType": "text"
+                    },
+                    "count": {
+                      "value": 1,
+                      "valueType": "number"
+                    }
+                  },
+                  "operator": "or"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "id": "8fa6a97c-15d8-4be5-a769-09291c4bb012",
+              "type": "apply_x_mult",
+              "params": {
+                "value": {
+                  "value": "BlissMult",
+                  "valueType": "user_var"
+                }
+              }
+            }
+          ],
+          "randomGroups": [],
+          "loops": [],
+          "position": {
+            "x": 1546,
+            "y": 177
+          }
+        },
+        {
+          "id": "ffa690f0-8ae3-4317-bce8-4a41067c60fc",
+          "trigger": "hand_played",
+          "blueprintCompatible": true,
+          "conditionGroups": [
+            {
+              "id": "643ca8bf-4c2e-4500-8fcc-42eca2d80a05",
+              "operator": "and",
+              "conditions": [
+                {
+                  "id": "892e7909-5aad-4a7d-a315-7a8b02075204",
+                  "type": "hand_type",
+                  "negate": false,
+                  "params": {
+                    "card_scope": {
+                      "value": "scoring",
+                      "valueType": "text"
+                    },
+                    "operator": {
+                      "value": "equals",
+                      "valueType": "text"
+                    },
+                    "value": {
+                      "value": "Pair",
+                      "valueType": "text"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "72873cf8-228c-4d86-ad89-d7cb8097df46",
+              "operator": "and",
+              "conditions": [
+                {
+                  "id": "6114d5df-c6c5-45ca-b858-5656933839a4",
+                  "type": "rank_count",
+                  "negate": false,
+                  "params": {
+                    "card_scope": {
+                      "value": "scoring",
+                      "valueType": "text"
+                    },
+                    "rank_type": {
+                      "value": "specific",
+                      "valueType": "text"
+                    },
+                    "specific_rank": {
+                      "value": "A",
+                      "label": "Ace",
+                      "valueType": "text"
+                    },
+                    "rank_group": {
+                      "valueType": "unknown"
+                    },
+                    "quantifier": {
+                      "value": "all",
+                      "valueType": "text"
+                    },
+                    "count": {
+                      "value": 1,
+                      "valueType": "number"
+                    }
+                  },
+                  "operator": "or"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "id": "1994a1fb-1660-466a-b004-4e99bcf883cc",
+              "type": "apply_x_mult",
+              "params": {
+                "value": {
+                  "value": "BlissMult",
+                  "valueType": "user_var"
+                }
+              }
+            }
+          ],
+          "randomGroups": [],
+          "loops": [],
+          "position": {
+            "x": 1870,
+            "y": 177
           }
         }
       ],
@@ -15666,7 +15899,6 @@
                     },
                     "value": {
                       "value": "Straight Flush",
-                      "label": "Straight Flush",
                       "valueType": "text"
                     }
                   }
@@ -15909,7 +16141,8 @@
               "type": "edit_joker_slots",
               "params": {
                 "operation": {
-                  "value": "add"
+                  "value": "add",
+                  "valueType": "unknown"
                 },
                 "value": {
                   "value": 77,
@@ -16293,13 +16526,16 @@
                   "type": "card_suit",
                   "negate": false,
                   "params": {
-                    "suit_type": {},
+                    "suit_type": {
+                      "valueType": "unknown"
+                    },
                     "specific_suit": {
                       "value": "Hearts",
-                      "label": "Hearts",
                       "valueType": "text"
                     },
-                    "suit_group": {}
+                    "suit_group": {
+                      "valueType": "unknown"
+                    }
                   },
                   "operator": "or"
                 },
@@ -16308,13 +16544,16 @@
                   "type": "card_suit",
                   "negate": false,
                   "params": {
-                    "suit_type": {},
+                    "suit_type": {
+                      "valueType": "unknown"
+                    },
                     "specific_suit": {
                       "value": "Diamonds",
-                      "label": "Diamonds",
                       "valueType": "text"
                     },
-                    "suit_group": {}
+                    "suit_group": {
+                      "valueType": "unknown"
+                    }
                   }
                 }
               ]
@@ -16429,15 +16668,15 @@
                   "params": {
                     "suit_type": {
                       "value": "specific",
-                      "label": "Specific Suit",
                       "valueType": "text"
                     },
                     "specific_suit": {
                       "value": "Spades",
-                      "label": "Spades",
                       "valueType": "text"
                     },
-                    "suit_group": {}
+                    "suit_group": {
+                      "valueType": "unknown"
+                    }
                   },
                   "operator": "or"
                 },
@@ -16448,15 +16687,15 @@
                   "params": {
                     "suit_type": {
                       "value": "specific",
-                      "label": "Specific Suit",
                       "valueType": "text"
                     },
                     "specific_suit": {
                       "value": "Clubs",
-                      "label": "Clubs",
                       "valueType": "text"
                     },
-                    "suit_group": {}
+                    "suit_group": {
+                      "valueType": "unknown"
+                    }
                   }
                 }
               ]
@@ -17882,7 +18121,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_crazymod_pizzacard",
@@ -17977,7 +18217,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_crazymod_poemcard",
@@ -18105,7 +18346,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -18210,7 +18452,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -20899,7 +21142,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -20994,7 +21238,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -21089,7 +21334,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -21184,7 +21430,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -23654,5 +23901,5 @@
     }
   ],
   "version": "1.0.0",
-  "exportedAt": "2026-07-11T07:47:56.917Z"
+  "exportedAt": "2026-07-11T21:40:24.193Z"
 }

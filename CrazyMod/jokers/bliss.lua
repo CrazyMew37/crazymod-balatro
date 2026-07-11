@@ -42,7 +42,7 @@ SMODS.Joker{ --Bliss
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
-            if (context.scoring_name == "Pair") and (((function()
+            if (context.scoring_name == "Pair") and ((function()
                 local count = 0
                 for _, playing_card in pairs(context.scoring_hand or {}) do
                     if playing_card:get_id() == 5 then
@@ -50,7 +50,11 @@ SMODS.Joker{ --Bliss
                     end
                 end
                 return count == #context.scoring_hand
-            end)() or (function()
+            end)()) then
+                return {
+                    Xmult = card.ability.extra.BlissMult
+                }
+            elseif (context.scoring_name == "Pair") and ((function()
                 local count = 0
                 for _, playing_card in pairs(context.scoring_hand or {}) do
                     if playing_card:get_id() == 4 then
@@ -58,7 +62,11 @@ SMODS.Joker{ --Bliss
                     end
                 end
                 return count == #context.scoring_hand
-            end)() or (function()
+            end)()) then
+                return {
+                    Xmult = card.ability.extra.BlissMult
+                }
+            elseif (context.scoring_name == "Pair") and ((function()
                 local count = 0
                 for _, playing_card in pairs(context.scoring_hand or {}) do
                     if playing_card:get_id() == 3 then
@@ -66,7 +74,11 @@ SMODS.Joker{ --Bliss
                     end
                 end
                 return count == #context.scoring_hand
-            end)() or (function()
+            end)()) then
+                return {
+                    Xmult = card.ability.extra.BlissMult
+                }
+            elseif (context.scoring_name == "Pair") and ((function()
                 local count = 0
                 for _, playing_card in pairs(context.scoring_hand or {}) do
                     if playing_card:get_id() == 2 then
@@ -74,7 +86,11 @@ SMODS.Joker{ --Bliss
                     end
                 end
                 return count == #context.scoring_hand
-            end)() or (function()
+            end)()) then
+                return {
+                    Xmult = card.ability.extra.BlissMult
+                }
+            elseif (context.scoring_name == "Pair") and ((function()
                 local count = 0
                 for _, playing_card in pairs(context.scoring_hand or {}) do
                     if playing_card:get_id() == A then
@@ -82,7 +98,7 @@ SMODS.Joker{ --Bliss
                     end
                 end
                 return count == #context.scoring_hand
-            end)())) then
+            end)()) then
                 return {
                     Xmult = card.ability.extra.BlissMult
                 }
