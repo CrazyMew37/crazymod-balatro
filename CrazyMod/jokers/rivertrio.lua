@@ -25,8 +25,8 @@ SMODS.Joker{ --River Trio
         }
     },
     pos = {
-        x = 8,
-        y = 6
+        x = 1,
+        y = 7
     },
     display_size = {
         w = 71 * 1, 
@@ -42,8 +42,8 @@ SMODS.Joker{ --River Trio
     atlas = 'CustomJokers',
     pools = { ["crazymod_crazymod_jokers"] = true },
     soul_pos = {
-        x = 9,
-        y = 6
+        x = 2,
+        y = 7
     },
     in_pool = function(self, args)
         return (

@@ -9,7 +9,7 @@ SMODS.Joker{ --Pixel Joker
     loc_txt = {
         ['name'] = 'Pixel Joker',
         ['text'] = {
-            [1] = '{s:10,C:blue}+#1# {}{s:10}Chip{}'
+            [1] = '{s:100,C:blue}+#1# {}{s:10}Chip{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'

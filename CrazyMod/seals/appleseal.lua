@@ -22,6 +22,7 @@ SMODS.Seal {
     unlocked = true,
     discovered = true,
     no_collection = false,
+    sound = { sound = "crazymod_Ringo_Solved_It", per = 1.2, vol = 0.4 },
     calculate = function(self, card, context)
         if context.main_scoring and context.cardarea == G.play then
             G.E_MANAGER:add_event(Event({

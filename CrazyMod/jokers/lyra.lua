@@ -5,7 +5,7 @@ SMODS.Joker{ --Lyra
         extra = {
             LyraMult = 9.12,
             LyraLucky = 249,
-            odds = 183
+            odds = 100
         }
     },
     loc_txt = {
@@ -27,7 +27,7 @@ SMODS.Joker{ --Lyra
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 4,
+    cost = 6,
     rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,

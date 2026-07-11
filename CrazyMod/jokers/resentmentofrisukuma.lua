@@ -34,7 +34,7 @@ SMODS.Joker{ --Resentment of Risukuma
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["crazymod_crazymod_jokers"] = true },
+    pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_cliche_deck_jokers"] = true },
     
     loc_vars = function(self, info_queue, card)
         

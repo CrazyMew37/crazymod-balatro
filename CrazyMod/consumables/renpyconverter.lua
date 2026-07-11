@@ -2,7 +2,7 @@
 SMODS.Consumable {
     key = 'renpyconverter',
     set = 'Spectral',
-    pos = { x = 8, y = 0 },
+    pos = { x = 2, y = 1 },
     config = { 
         extra = {
             odds = 12   

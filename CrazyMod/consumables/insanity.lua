@@ -2,7 +2,7 @@
 SMODS.Consumable {
     key = 'insanity',
     set = 'Spectral',
-    pos = { x = 6, y = 0 },
+    pos = { x = 0, y = 1 },
     config = { 
         extra = {
             odds = 37,
@@ -23,8 +23,8 @@ SMODS.Consumable {
     can_repeat_soul = false,
     atlas = 'CustomConsumables',
     soul_pos = {
-        x = 7,
-        y = 0
+        x = 1,
+        y = 1
     },
     use = function(self, card, area, copier)
         local used_card = copier or card

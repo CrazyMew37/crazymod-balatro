@@ -19,7 +19,7 @@ SMODS.Joker{ --Sailor Moon
         }
     },
     pos = {
-        x = 4,
+        x = 7,
         y = 5
     },
     display_size = {

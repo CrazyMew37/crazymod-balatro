@@ -19,7 +19,7 @@ SMODS.Joker{ --Tertiary Colors
         }
     },
     pos = {
-        x = 0,
+        x = 3,
         y = 7
     },
     display_size = {
@@ -34,7 +34,7 @@ SMODS.Joker{ --Tertiary Colors
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["crazymod_crazymod_jokers"] = true },
+    pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_cliche_deck_jokers"] = true },
     
     loc_vars = function(self, info_queue, card)
         

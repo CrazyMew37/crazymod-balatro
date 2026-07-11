@@ -11,15 +11,15 @@ SMODS.Joker{ --MEIKO
         ['text'] = {
             [1] = '{C:green}#1# in #2#{} chance to',
             [2] = 'give each card held in',
-            [3] = 'hand a {C:planet}Musical Seal{}'
+            [3] = 'hand a {C:red}Hold Seal{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 6,
-        y = 7
+        x = 3,
+        y = 8
     },
     display_size = {
         w = 71 * 1, 
@@ -46,7 +46,7 @@ SMODS.Joker{ --MEIKO
             if true then
                 if SMODS.pseudorandom_probability(card, 'group_0_a71287af', 1, card.ability.extra.odds, 'j_crazymod_meiko', false) then
                     SMODS.calculate_effect({func = function()
-                        context.other_card:set_seal("crazymod_musicalseal", true)
+                        context.other_card:set_seal("crazymod_holdseal", true)
                     end}, card)
                     card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "Card Modified!", colour = G.C.BLUE})
                 end

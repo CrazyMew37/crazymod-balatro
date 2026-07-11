@@ -2,7 +2,7 @@
 SMODS.Consumable {
     key = 'brown',
     set = 'rare_paint_color',
-    pos = { x = 6, y = 3 },
+    pos = { x = 0, y = 4 },
     config = { 
         extra = {
             hands0 = 1,

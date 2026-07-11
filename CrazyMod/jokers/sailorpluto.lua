@@ -21,7 +21,7 @@ SMODS.Joker{ --Sailor Pluto
         }
     },
     pos = {
-        x = 0,
+        x = 3,
         y = 6
     },
     display_size = {

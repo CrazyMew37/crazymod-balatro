@@ -5,13 +5,13 @@ SMODS.Consumable {
     pos = { x = 4, y = 0 },
     config = { 
         extra = {
-            dollars0 = 6   
+            dollars0 = 7   
         } 
     },
     loc_txt = {
         name = 'Homework',
         text = {
-            [1] = '{C:money}+6${}',
+            [1] = '{C:money}+7${}',
             [2] = 'Add an {C:red}Apple Seal{} to {C:attention}1{}',
             [3] = 'selected card in your hand',
             [4] = '{s:0.5,C:red}\"Your Poker Game is completely illogical!\" -Ringo Ando{}'
@@ -32,9 +32,9 @@ SMODS.Consumable {
                 func = function()
                     
                     local current_dollars = G.GAME.dollars
-                    local target_dollars = G.GAME.dollars + 6
+                    local target_dollars = G.GAME.dollars + 7
                     local dollar_value = target_dollars - current_dollars
-                    card_eval_status_text(used_card, 'extra', nil, nil, nil, {message = "+"..tostring(6).." $", colour = G.C.RED})
+                    card_eval_status_text(used_card, 'extra', nil, nil, nil, {message = "+"..tostring(7).." $", colour = G.C.RED})
                     ease_dollars(dollar_value, true)
                     return true
                 end

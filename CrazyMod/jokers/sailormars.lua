@@ -19,7 +19,7 @@ SMODS.Joker{ --Sailor Mars
         }
     },
     pos = {
-        x = 6,
+        x = 9,
         y = 5
     },
     display_size = {

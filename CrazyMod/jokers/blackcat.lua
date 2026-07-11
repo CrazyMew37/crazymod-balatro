@@ -18,8 +18,8 @@ SMODS.Joker{ --Black Cat
         }
     },
     pos = {
-        x = 4,
-        y = 9
+        x = 1,
+        y = 10
     },
     display_size = {
         w = 71 * 1, 
@@ -35,8 +35,8 @@ SMODS.Joker{ --Black Cat
     atlas = 'CustomJokers',
     pools = { ["crazymod_crazymod_jokers"] = true },
     soul_pos = {
-        x = 5,
-        y = 9
+        x = 2,
+        y = 10
     },
     in_pool = function(self, args)
         return (

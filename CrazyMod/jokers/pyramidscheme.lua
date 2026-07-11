@@ -20,8 +20,8 @@ SMODS.Joker{ --Pyramid Scheme
         }
     },
     pos = {
-        x = 9,
-        y = 9
+        x = 6,
+        y = 10
     },
     display_size = {
         w = 71 * 1, 
@@ -37,7 +37,7 @@ SMODS.Joker{ --Pyramid Scheme
     atlas = 'CustomJokers',
     pools = { ["crazymod_crazymod_jokers"] = true },
     soul_pos = {
-        x = 0,
+        x = 7,
         y = 10
     },
     in_pool = function(self, args)

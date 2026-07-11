@@ -17,22 +17,22 @@ SMODS.Joker{ --Asteroid
         }
     },
     pos = {
-        x = 4,
-        y = 10
+        x = 9,
+        y = 12
     },
     display_size = {
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 7,
-    rarity = 3,
+    cost = 4,
+    rarity = 2,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["crazymod_crazymod_jokers"] = true },
+    pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_cliche_deck_jokers"] = true },
     
     calculate = function(self, card, context)
         if context.first_hand_drawn  then

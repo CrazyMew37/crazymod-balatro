@@ -18,7 +18,7 @@ SMODS.Joker{ --Repeater
         }
     },
     pos = {
-        x = 2,
+        x = 9,
         y = 10
     },
     display_size = {
@@ -33,7 +33,7 @@ SMODS.Joker{ --Repeater
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["crazymod_crazymod_jokers"] = true },
+    pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_cliche_deck_jokers"] = true },
     
     calculate = function(self, card, context)
         if context.repetition and context.cardarea == G.play  then

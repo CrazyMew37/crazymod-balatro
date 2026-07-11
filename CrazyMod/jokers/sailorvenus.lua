@@ -21,8 +21,8 @@ SMODS.Joker{ --Sailor Venus
         }
     },
     pos = {
-        x = 8,
-        y = 5
+        x = 1,
+        y = 6
     },
     display_size = {
         w = 71 * 1, 

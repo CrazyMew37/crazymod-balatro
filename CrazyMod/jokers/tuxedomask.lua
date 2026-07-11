@@ -19,7 +19,7 @@ SMODS.Joker{ --Tuxedo Mask
         }
     },
     pos = {
-        x = 4,
+        x = 7,
         y = 6
     },
     display_size = {

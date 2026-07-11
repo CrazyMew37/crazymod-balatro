@@ -19,8 +19,8 @@ SMODS.Joker{ --Sailor Chibi Moon
         }
     },
     pos = {
-        x = 9,
-        y = 5
+        x = 2,
+        y = 6
     },
     display_size = {
         w = 71 * 1, 

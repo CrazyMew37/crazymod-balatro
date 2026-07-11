@@ -2,7 +2,7 @@
 SMODS.Consumable {
     key = 'red',
     set = 'paint_color',
-    pos = { x = 9, y = 0 },
+    pos = { x = 3, y = 1 },
     config = { 
         extra = {
             discards0 = 1   

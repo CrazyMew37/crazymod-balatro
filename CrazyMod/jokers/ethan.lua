@@ -5,7 +5,7 @@ SMODS.Joker{ --Ethan
         extra = {
             EthanMoney = 1,
             EthanLucky = 250,
-            odds = 155
+            odds = 100
         }
     },
     loc_txt = {
@@ -27,7 +27,7 @@ SMODS.Joker{ --Ethan
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 5,
+    cost = 6,
     rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,

@@ -19,7 +19,7 @@ SMODS.Joker{ --Luna and Artemis
         }
     },
     pos = {
-        x = 5,
+        x = 8,
         y = 6
     },
     display_size = {

@@ -23,7 +23,7 @@ SMODS.Joker{ --Sailor Mercury
         }
     },
     pos = {
-        x = 5,
+        x = 8,
         y = 5
     },
     display_size = {

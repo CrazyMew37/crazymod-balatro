@@ -3,21 +3,23 @@ SMODS.Joker{ --Emerald
     key = "emerald",
     config = {
         extra = {
-            EmeraldMult = 2
+            EmeraldMult = 2,
+            MoneyCap = 100
         }
     },
     loc_txt = {
         ['name'] = 'Emerald',
         ['text'] = {
             [1] = 'Sell this card to',
-            [2] = '{C:attention}double{} your money'
+            [2] = '{C:attention}double{} your money',
+            [3] = '{C:inactive}(Max of $#2#){}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 2,
+        x = 4,
         y = 5
     },
     display_size = {
@@ -36,7 +38,7 @@ SMODS.Joker{ --Emerald
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.EmeraldMult}}
+        return {vars = {card.ability.extra.EmeraldMult, card.ability.extra.MoneyCap}}
     end,
     
     calculate = function(self, card, context)

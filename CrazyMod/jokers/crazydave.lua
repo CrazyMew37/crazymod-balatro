@@ -18,7 +18,7 @@ SMODS.Joker{ --Crazy Dave
         }
     },
     pos = {
-        x = 1,
+        x = 8,
         y = 10
     },
     display_size = {

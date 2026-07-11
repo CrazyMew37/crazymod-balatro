@@ -27,7 +27,7 @@ SMODS.Joker{ --Royal Alchemy
         }
     },
     pos = {
-        x = 2,
+        x = 9,
         y = 9
     },
     display_size = {
@@ -44,8 +44,8 @@ SMODS.Joker{ --Royal Alchemy
     atlas = 'CustomJokers',
     pools = { ["crazymod_crazymod_jokers"] = true },
     soul_pos = {
-        x = 3,
-        y = 9
+        x = 0,
+        y = 10
     },
     in_pool = function(self, args)
         return (

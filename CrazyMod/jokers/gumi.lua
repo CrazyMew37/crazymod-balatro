@@ -9,7 +9,7 @@ SMODS.Joker{ --GUMI
         ['name'] = 'GUMI',
         ['text'] = {
             [1] = '{C:attention}All{} scored cards are given a',
-            [2] = '{C:planet}Musical Seal,{} but their {C:attention}Suit{}, {C:attention}Rank{},',
+            [2] = '{C:red}Hold Seal,{} but their {C:attention}Suit{}, {C:attention}Rank{},',
             [3] = 'and {C:attention}Enhancement{} are randomized'
         },
         ['unlock'] = {
@@ -17,14 +17,14 @@ SMODS.Joker{ --GUMI
         }
     },
     pos = {
-        x = 8,
-        y = 7
+        x = 5,
+        y = 8
     },
     display_size = {
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 9,
+    cost = 8,
     rarity = 3,
     blueprint_compat = false,
     eternal_compat = true,
@@ -49,7 +49,7 @@ SMODS.Joker{ --GUMI
                     end
                     local random_enhancement = pseudorandom_element(enhancement_pool, 'edit_card_enhancement')
                     scored_card:set_ability(random_enhancement)
-                    scored_card:set_seal("crazymod_musicalseal", true)
+                    scored_card:set_seal("crazymod_holdseal", true)
                     card_eval_status_text(scored_card, 'extra', nil, nil, nil, {message = "Card Modified!", colour = G.C.ORANGE})
                     return true
                 end

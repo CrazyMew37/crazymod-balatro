@@ -2,7 +2,7 @@
 SMODS.Consumable {
     key = 'orange',
     set = 'paint_color',
-    pos = { x = 0, y = 1 },
+    pos = { x = 4, y = 1 },
     loc_txt = {
         name = 'Orange',
         text = {

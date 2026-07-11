@@ -18,7 +18,7 @@ SMODS.Joker{ --Tux
         }
     },
     pos = {
-        x = 1,
+        x = 4,
         y = 7
     },
     display_size = {
@@ -33,7 +33,7 @@ SMODS.Joker{ --Tux
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["crazymod_crazymod_jokers"] = true },
+    pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_cliche_deck_jokers"] = true },
     
     loc_vars = function(self, info_queue, card)
         

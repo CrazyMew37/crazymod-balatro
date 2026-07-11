@@ -21,8 +21,8 @@ SMODS.Joker{ --Miyako Akiyama
         }
     },
     pos = {
-        x = 5,
-        y = 10
+        x = 0,
+        y = 13
     },
     display_size = {
         w = 71 * 1, 
@@ -36,7 +36,7 @@ SMODS.Joker{ --Miyako Akiyama
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["crazymod_crazymod_jokers"] = true },
+    pools = { ["crazymod_crazymod_jokers"] = true, ["crazymod_cliche_deck_jokers"] = true },
     
     loc_vars = function(self, info_queue, card)
         

@@ -19,8 +19,8 @@ SMODS.Joker{ --Diana Addison
         }
     },
     pos = {
-        x = 8,
-        y = 10
+        x = 7,
+        y = 13
     },
     display_size = {
         w = 71 * 1, 

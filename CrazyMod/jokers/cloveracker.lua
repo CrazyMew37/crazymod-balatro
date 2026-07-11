@@ -19,8 +19,8 @@ SMODS.Joker{ --Clover Acker
         }
     },
     pos = {
-        x = 9,
-        y = 10
+        x = 8,
+        y = 13
     },
     display_size = {
         w = 71 * 1, 

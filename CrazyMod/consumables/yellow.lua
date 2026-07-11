@@ -2,7 +2,7 @@
 SMODS.Consumable {
     key = 'yellow',
     set = 'paint_color',
-    pos = { x = 1, y = 1 },
+    pos = { x = 5, y = 1 },
     config = { 
         extra = {
             dollars0 = 1.5   

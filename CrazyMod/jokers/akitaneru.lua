@@ -17,7 +17,7 @@ SMODS.Joker{ --Akita Neru
         }
     },
     pos = {
-        x = 0,
+        x = 7,
         y = 8
     },
     display_size = {

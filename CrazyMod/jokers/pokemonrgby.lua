@@ -21,7 +21,7 @@ SMODS.Joker{ --Pokemon RGBY
         }
     },
     pos = {
-        x = 6,
+        x = 9,
         y = 6
     },
     display_size = {

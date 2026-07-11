@@ -21,8 +21,8 @@ SMODS.Joker{ --Sailor Jupiter
         }
     },
     pos = {
-        x = 7,
-        y = 5
+        x = 0,
+        y = 6
     },
     display_size = {
         w = 71 * 1, 

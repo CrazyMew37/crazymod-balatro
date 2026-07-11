@@ -21,7 +21,7 @@ SMODS.Joker{ --Sailor Uranus
         }
     },
     pos = {
-        x = 1,
+        x = 4,
         y = 6
     },
     display_size = {

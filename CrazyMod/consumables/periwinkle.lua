@@ -2,7 +2,7 @@
 SMODS.Consumable {
     key = 'periwinkle',
     set = 'paint_color',
-    pos = { x = 1, y = 3 },
+    pos = { x = 5, y = 3 },
     loc_txt = {
         name = 'Periwinkle',
         text = {

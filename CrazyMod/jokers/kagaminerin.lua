@@ -8,18 +8,16 @@ SMODS.Joker{ --Kagamine Rin
     loc_txt = {
         ['name'] = 'Kagamine Rin',
         ['text'] = {
-            [1] = 'If played hand contains a',
-            [2] = '{C:attention}Two Pair{}, then give the',
-            [3] = '{C:attention}first{} and {C:attention}third{} card a',
-            [4] = '{C:planet}Musical Seal{}'
+            [1] = 'If played hand is a {C:attention}Two Pair{}, then give',
+            [2] = 'the {C:attention}first{} and {C:attention}third{} card a {C:red}Hold Seal{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 4,
-        y = 7
+        x = 1,
+        y = 8
     },
     display_size = {
         w = 71 * 1, 
@@ -37,12 +35,12 @@ SMODS.Joker{ --Kagamine Rin
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
-            if ((next(context.poker_hands["Two Pair"]) and context.other_card == context.scoring_hand[1])) and ((next(context.poker_hands["Two Pair"]) and context.other_card == context.scoring_hand[3])) then
+            if ((context.scoring_name == "Two Pair" and context.other_card == context.scoring_hand[1])) and ((context.scoring_name == "Two Pair" and context.other_card == context.scoring_hand[3])) then
                 local scored_card = context.other_card
                 G.E_MANAGER:add_event(Event({
                     func = function()
                         
-                        scored_card:set_seal("crazymod_musicalseal", true)
+                        scored_card:set_seal("crazymod_holdseal", true)
                         card_eval_status_text(scored_card, 'extra', nil, nil, nil, {message = "Card Modified!", colour = G.C.ORANGE})
                         return true
                     end

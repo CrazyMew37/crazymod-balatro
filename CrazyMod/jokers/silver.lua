@@ -5,7 +5,7 @@ SMODS.Joker{ --Silver
         extra = {
             SilverSlots = 1,
             SilverIncrease = 2,
-            odds = 21
+            odds = 20
         }
     },
     loc_txt = {

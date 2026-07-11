@@ -11,21 +11,24 @@ SMODS.Joker{ --Kasane Teto
         ['text'] = {
             [1] = 'Cards with a {C:planet}Musical Seal{}',
             [2] = 'give an additonal {X:mult,C:money}^#1#{}',
-            [3] = 'Mult when scored'
+            [3] = 'Mult when scored',
+            [4] = 'Cards with a {C:red}Hold Seal{}',
+            [5] = 'give an additional {X:chips,C:money}^#1#{}',
+            [6] = 'Chips when scored'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 1,
+        x = 8,
         y = 8
     },
     display_size = {
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 9,
+    cost = 10,
     rarity = 3,
     blueprint_compat = true,
     eternal_compat = true,
@@ -45,6 +48,10 @@ SMODS.Joker{ --Kasane Teto
             if context.other_card.seal == "Crazymod_musicalseal" then
                 return {
                     e_mult = card.ability.extra.TetoMult
+                }
+            elseif context.other_card.seal == "Crazymod_holdseal" then
+                return {
+                    e_chips = card.ability.extra.TetoMult
                 }
             end
         end

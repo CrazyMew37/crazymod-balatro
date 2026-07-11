@@ -19,7 +19,7 @@ SMODS.Joker{ --Sailor Neptune
         }
     },
     pos = {
-        x = 2,
+        x = 5,
         y = 6
     },
     display_size = {

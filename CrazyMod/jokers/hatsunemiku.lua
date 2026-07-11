@@ -16,7 +16,7 @@ SMODS.Joker{ --Hatsune Miku
         }
     },
     pos = {
-        x = 2,
+        x = 9,
         y = 7
     },
     display_size = {

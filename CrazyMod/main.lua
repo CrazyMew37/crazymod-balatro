@@ -105,7 +105,7 @@ if true then
     assert(SMODS.load_file("jokers/grannysmith.lua"))()
     assert(SMODS.load_file("jokers/goldendelicious.lua"))()
     assert(SMODS.load_file("jokers/enchantedgoldenapple.lua"))()
-    assert(SMODS.load_file("jokers/badapple.lua"))()
+    assert(SMODS.load_file("jokers/andouapple.lua"))()
     assert(SMODS.load_file("jokers/plastictangerine.lua"))()
     assert(SMODS.load_file("jokers/pizzabox.lua"))()
     assert(SMODS.load_file("jokers/pineapplepizza.lua"))()
@@ -131,6 +131,7 @@ if true then
     assert(SMODS.load_file("jokers/revengeofringo.lua"))()
     assert(SMODS.load_file("jokers/maliceofmaguro.lua"))()
     assert(SMODS.load_file("jokers/resentmentofrisukuma.lua"))()
+    assert(SMODS.load_file("jokers/entanglementofecolo.lua"))()
     assert(SMODS.load_file("jokers/gachacapsule.lua"))()
     assert(SMODS.load_file("jokers/toilet.lua"))()
     assert(SMODS.load_file("jokers/chaostheory.lua"))()
@@ -140,6 +141,7 @@ if true then
     assert(SMODS.load_file("jokers/_2048.lua"))()
     assert(SMODS.load_file("jokers/emerald.lua"))()
     assert(SMODS.load_file("jokers/rushhour.lua"))()
+    assert(SMODS.load_file("jokers/mms.lua"))()
     assert(SMODS.load_file("jokers/sailormoon.lua"))()
     assert(SMODS.load_file("jokers/sailormercury.lua"))()
     assert(SMODS.load_file("jokers/sailormars.lua"))()
@@ -157,6 +159,9 @@ if true then
     assert(SMODS.load_file("jokers/rivertrio.lua"))()
     assert(SMODS.load_file("jokers/tertiarycolors.lua"))()
     assert(SMODS.load_file("jokers/tux.lua"))()
+    assert(SMODS.load_file("jokers/macintosh.lua"))()
+    assert(SMODS.load_file("jokers/bliss.lua"))()
+    assert(SMODS.load_file("jokers/pierrot.lua"))()
     assert(SMODS.load_file("jokers/hatsunemiku.lua"))()
     assert(SMODS.load_file("jokers/kagaminelen.lua"))()
     assert(SMODS.load_file("jokers/kagaminerin.lua"))()
@@ -179,9 +184,29 @@ if true then
     assert(SMODS.load_file("jokers/pyramidscheme.lua"))()
     assert(SMODS.load_file("jokers/crazydave.lua"))()
     assert(SMODS.load_file("jokers/repeater.lua"))()
+    assert(SMODS.load_file("jokers/octozombie.lua"))()
+    assert(SMODS.load_file("jokers/chicken.lua"))()
+    assert(SMODS.load_file("jokers/chickenwrangler.lua"))()
+    assert(SMODS.load_file("jokers/frutigeraero.lua"))()
+    assert(SMODS.load_file("jokers/frutigeraurora.lua"))()
+    assert(SMODS.load_file("jokers/dorfic.lua"))()
+    assert(SMODS.load_file("jokers/darkaero.lua"))()
+    assert(SMODS.load_file("jokers/frutigermetro.lua"))()
+    assert(SMODS.load_file("jokers/unicorn.lua"))()
+    assert(SMODS.load_file("jokers/potofgold.lua"))()
+    assert(SMODS.load_file("jokers/indigo.lua"))()
+    assert(SMODS.load_file("jokers/prideflag.lua"))()
+    assert(SMODS.load_file("jokers/paintspill.lua"))()
+    assert(SMODS.load_file("jokers/mooncheese.lua"))()
+    assert(SMODS.load_file("jokers/lunarflag.lua"))()
+    assert(SMODS.load_file("jokers/moonstick.lua"))()
+    assert(SMODS.load_file("jokers/bluemoon.lua"))()
+    assert(SMODS.load_file("jokers/eclipse.lua"))()
     assert(SMODS.load_file("jokers/bemeebeth.lua"))()
     assert(SMODS.load_file("jokers/asteroid.lua"))()
     assert(SMODS.load_file("jokers/miyakoakiyama.lua"))()
+    assert(SMODS.load_file("jokers/heirtothethrone.lua"))()
+    assert(SMODS.load_file("jokers/blackjack.lua"))()
     assert(SMODS.load_file("jokers/spesashworth.lua"))()
     assert(SMODS.load_file("jokers/hezlyahonen.lua"))()
     assert(SMODS.load_file("jokers/dianaaddison.lua"))()
@@ -195,7 +220,11 @@ if true then
     assert(SMODS.load_file("consumables/theleek.lua"))()
     assert(SMODS.load_file("consumables/crystaltokyo.lua"))()
     assert(SMODS.load_file("consumables/homework.lua"))()
-    assert(SMODS.load_file("consumables/synth.lua"))()
+    assert(SMODS.load_file("consumables/Synth.lua"))()
+    assert(SMODS.load_file("consumables/microphone.lua"))()
+    assert(SMODS.load_file("consumables/vista.lua"))()
+    assert(SMODS.load_file("consumables/prism.lua"))()
+    assert(SMODS.load_file("consumables/crescent.lua"))()
     assert(SMODS.load_file("consumables/insanity.lua"))()
     assert(SMODS.load_file("consumables/renpyconverter.lua"))()
     assert(SMODS.load_file("consumables/red.lua"))()
@@ -239,6 +268,10 @@ end
 if true then
     assert(SMODS.load_file("seals/appleseal.lua"))()
     assert(SMODS.load_file("seals/musicalseal.lua"))()
+    assert(SMODS.load_file("seals/holdseal.lua"))()
+    assert(SMODS.load_file("seals/rainbowseal.lua"))()
+    assert(SMODS.load_file("seals/lunarseal.lua"))()
+    assert(SMODS.load_file("seals/frutigerseal.lua"))()
 end
 
 -- load the vouchers
@@ -308,7 +341,7 @@ SMODS.ObjectType({
         ["j_crazymod_grannysmith"] = true,
         ["j_crazymod_goldendelicious"] = true,
         ["j_crazymod_enchantedgoldenapple"] = true,
-        ["j_crazymod_badapple"] = true,
+        ["j_crazymod_andouapple"] = true,
         ["j_crazymod_plastictangerine"] = true,
         ["j_crazymod_pizzabox"] = true,
         ["j_crazymod_pineapplepizza"] = true,
@@ -334,6 +367,7 @@ SMODS.ObjectType({
         ["j_crazymod_revengeofringo"] = true,
         ["j_crazymod_maliceofmaguro"] = true,
         ["j_crazymod_resentmentofrisukuma"] = true,
+        ["j_crazymod_entanglementofecolo"] = true,
         ["j_crazymod_gachacapsule"] = true,
         ["j_crazymod_toilet"] = true,
         ["j_crazymod_chaostheory"] = true,
@@ -343,6 +377,7 @@ SMODS.ObjectType({
         ["j_crazymod__2048"] = true,
         ["j_crazymod_emerald"] = true,
         ["j_crazymod_rushhour"] = true,
+        ["j_crazymod_mms"] = true,
         ["j_crazymod_sailormoon"] = true,
         ["j_crazymod_sailormercury"] = true,
         ["j_crazymod_sailormars"] = true,
@@ -360,6 +395,9 @@ SMODS.ObjectType({
         ["j_crazymod_rivertrio"] = true,
         ["j_crazymod_tertiarycolors"] = true,
         ["j_crazymod_tux"] = true,
+        ["j_crazymod_macintosh"] = true,
+        ["j_crazymod_bliss"] = true,
+        ["j_crazymod_pierrot"] = true,
         ["j_crazymod_hatsunemiku"] = true,
         ["j_crazymod_kagaminelen"] = true,
         ["j_crazymod_kagaminerin"] = true,
@@ -382,9 +420,29 @@ SMODS.ObjectType({
         ["j_crazymod_pyramidscheme"] = true,
         ["j_crazymod_crazydave"] = true,
         ["j_crazymod_repeater"] = true,
+        ["j_crazymod_octozombie"] = true,
+        ["j_crazymod_chicken"] = true,
+        ["j_crazymod_chickenwrangler"] = true,
+        ["j_crazymod_frutigeraero"] = true,
+        ["j_crazymod_frutigeraurora"] = true,
+        ["j_crazymod_dorfic"] = true,
+        ["j_crazymod_darkaero"] = true,
+        ["j_crazymod_frutigermetro"] = true,
+        ["j_crazymod_unicorn"] = true,
+        ["j_crazymod_potofgold"] = true,
+        ["j_crazymod_indigo"] = true,
+        ["j_crazymod_prideflag"] = true,
+        ["j_crazymod_paintspill"] = true,
+        ["j_crazymod_mooncheese"] = true,
+        ["j_crazymod_lunarflag"] = true,
+        ["j_crazymod_moonstick"] = true,
+        ["j_crazymod_bluemoon"] = true,
+        ["j_crazymod_eclipse"] = true,
         ["j_crazymod_bemeebeth"] = true,
         ["j_crazymod_asteroid"] = true,
         ["j_crazymod_miyakoakiyama"] = true,
+        ["j_crazymod_heirtothethrone"] = true,
+        ["j_crazymod_blackjack"] = true,
         ["j_crazymod_spesashworth"] = true,
         ["j_crazymod_hezlyahonen"] = true,
         ["j_crazymod_dianaaddison"] = true,
@@ -412,7 +470,7 @@ SMODS.ObjectType({
         ["j_crazymod_honeycrisp"] = true,
         ["j_crazymod_grannysmith"] = true,
         ["j_crazymod_goldendelicious"] = true,
-        ["j_crazymod_badapple"] = true,
+        ["j_crazymod_andouapple"] = true,
         ["j_crazymod_plastictangerine"] = true,
         ["j_crazymod_pizzabox"] = true,
         ["j_crazymod_pineapplepizza"] = true,
@@ -434,6 +492,8 @@ SMODS.ObjectType({
         ["j_crazymod_squidwardtentacles"] = true,
         ["j_crazymod_cutawaygag"] = true,
         ["j_crazymod_revengeofringo"] = true,
+        ["j_crazymod_maliceofmaguro"] = true,
+        ["j_crazymod_resentmentofrisukuma"] = true,
         ["j_crazymod_gachacapsule"] = true,
         ["j_crazymod_toilet"] = true,
         ["j_crazymod_chaostheory"] = true,
@@ -442,6 +502,8 @@ SMODS.ObjectType({
         ["j_crazymod_grilledcheese"] = true,
         ["j_crazymod__2048"] = true,
         ["j_crazymod_emerald"] = true,
+        ["j_crazymod_rushhour"] = true,
+        ["j_crazymod_mms"] = true,
         ["j_crazymod_sailormoon"] = true,
         ["j_crazymod_sailormercury"] = true,
         ["j_crazymod_sailormars"] = true,
@@ -456,6 +518,10 @@ SMODS.ObjectType({
         ["j_crazymod_lunaandartemis"] = true,
         ["j_crazymod_pokemonrgby"] = true,
         ["j_crazymod_canvas"] = true,
+        ["j_crazymod_tertiarycolors"] = true,
+        ["j_crazymod_tux"] = true,
+        ["j_crazymod_macintosh"] = true,
+        ["j_crazymod_bliss"] = true,
         ["j_crazymod_hatsunemiku"] = true,
         ["j_crazymod_kagaminelen"] = true,
         ["j_crazymod_kagaminerin"] = true,
@@ -467,7 +533,29 @@ SMODS.ObjectType({
         ["j_crazymod_akitaneru"] = true,
         ["j_crazymod_kasaneteto"] = true,
         ["j_crazymod_crazydave"] = true,
-        ["j_crazymod_bemeebeth"] = true
+        ["j_crazymod_repeater"] = true,
+        ["j_crazymod_octozombie"] = true,
+        ["j_crazymod_chicken"] = true,
+        ["j_crazymod_chickenwrangler"] = true,
+        ["j_crazymod_frutigeraero"] = true,
+        ["j_crazymod_frutigeraurora"] = true,
+        ["j_crazymod_dorfic"] = true,
+        ["j_crazymod_darkaero"] = true,
+        ["j_crazymod_frutigermetro"] = true,
+        ["j_crazymod_unicorn"] = true,
+        ["j_crazymod_potofgold"] = true,
+        ["j_crazymod_indigo"] = true,
+        ["j_crazymod_prideflag"] = true,
+        ["j_crazymod_paintspill"] = true,
+        ["j_crazymod_mooncheese"] = true,
+        ["j_crazymod_lunarflag"] = true,
+        ["j_crazymod_moonstick"] = true,
+        ["j_crazymod_bluemoon"] = true,
+        ["j_crazymod_eclipse"] = true,
+        ["j_crazymod_bemeebeth"] = true,
+        ["j_crazymod_asteroid"] = true,
+        ["j_crazymod_miyakoakiyama"] = true,
+        ["j_crazymod_heirtothethrone"] = true
     },
 })
 
@@ -482,7 +570,7 @@ SMODS.ObjectType({
         ["j_crazymod_grannysmith"] = true,
         ["j_crazymod_goldendelicious"] = true,
         ["j_crazymod_enchantedgoldenapple"] = true,
-        ["j_crazymod_badapple"] = true
+        ["j_crazymod_andouapple"] = true
     },
 })
 

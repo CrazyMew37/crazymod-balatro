@@ -21,7 +21,7 @@ SMODS.Joker{ --Sailor Saturn
         }
     },
     pos = {
-        x = 3,
+        x = 6,
         y = 6
     },
     display_size = {

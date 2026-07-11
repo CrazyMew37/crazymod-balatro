@@ -19,8 +19,8 @@ SMODS.Joker{ --Spes Ashworth
         }
     },
     pos = {
-        x = 6,
-        y = 10
+        x = 5,
+        y = 13
     },
     display_size = {
         w = 71 * 1, 

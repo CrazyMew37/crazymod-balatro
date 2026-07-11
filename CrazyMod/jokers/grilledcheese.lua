@@ -19,7 +19,7 @@ SMODS.Joker{ --Grilled Cheese
         }
     },
     pos = {
-        x = 0,
+        x = 2,
         y = 5
     },
     display_size = {

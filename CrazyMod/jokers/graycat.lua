@@ -18,8 +18,8 @@ SMODS.Joker{ --Gray Cat
         }
     },
     pos = {
-        x = 8,
-        y = 9
+        x = 5,
+        y = 10
     },
     display_size = {
         w = 71 * 1, 

@@ -22,6 +22,7 @@ SMODS.Seal {
     unlocked = true,
     discovered = true,
     no_collection = false,
+    sound = { sound = "chips1", per = 1.2, vol = 0.4 },
     calculate = function(self, card, context)
         if context.main_scoring and context.cardarea == G.play then
             return {
